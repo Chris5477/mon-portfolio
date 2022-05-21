@@ -1,15 +1,15 @@
 import { Grid, Stack, Typography, Card, CardContent, CardHeader, CardActions, IconButton } from "@mui/material";
 import VisibilityIcon from "@mui/icons-material/Visibility";
-import { projects } from "../utils/listProject";
 
-const Content = () => {
+const Content = ({list}) => {
+
 	return (
 		<Grid container>
 			<Grid item>
 				<Typography variant="h2">Lorem ipsum dolor sit amet.</Typography>
 			</Grid>
 			<Stack width="auto" height="300px" direction="row" justifyContent={"space-around"}>
-				{projects.map(({ id, title, description }) => (
+				{list.map(({ id, title, description }) => (
 					<Card key={id} sx={{ width: 200, height: "500px" }}>
 						<CardHeader title={id} />
 						<CardContent>

@@ -1,30 +1,27 @@
-import { Box, Typography, ImageList, ImageListItem } from "@mui/material";
+import { Box, Typography, ImageList, ImageListItem, Button } from "@mui/material";
+import { projects } from "../utils/listProject";
 
 const Project = () => {
+	const { title, description, logo, illustrations, skillWorked, github } = projects[0]
 	return (
 		<Box>
-			<img src="" alt="project" />
+			<img src={logo} alt="project" />
 
-			<Typography variant="h1">Title</Typography>
-			<Typography variant="h2">Desription</Typography>
+			<Typography variant="h1">{title}</Typography>
+			<Typography variant="h2">{description}</Typography>
+
 			<ul>
-				{Array.from({ length: 4 }).map((_, index) => (
+				{skillWorked.map((skill, index) => (
 					<li key={`index ${index}`}>
-						<Typography>Skill</Typography>
+						<Typography paragraph>{skill}</Typography>
 					</li>
 				))}
 			</ul>
-			<ul>
-				{Array.from({ length: 4 }).map((_, index) => (
-					<li key={`index ${index}`}>
-						<Typography paragraph>Lorem ipsum dolor sit amet consectetur adipisicing elit. T</Typography>
-					</li>
-				))}
-			</ul>
+			<Button href={github}>Voir sur Github</Button>
 			<Box sx={{ width: 500, height: 450, overflowY: "scroll" }}>
 				<ImageList variant="masonry" cols={3} gap={8}>
-					{Array.from({ length: 6 }).map((_, index) => (
-						<ImageListItem key={index}>{/* <img/> */}</ImageListItem>
+					{illustrations.map((picture, index) => (
+						<ImageListItem key={index}>{<img src={picture} alt="illustration" />}</ImageListItem>
 					))}
 				</ImageList>
 			</Box>
