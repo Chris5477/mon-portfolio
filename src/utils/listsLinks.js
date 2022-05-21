@@ -2,7 +2,6 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import AttachmentIcon from "@mui/icons-material/Attachment";
 import LanguageIcon from "@mui/icons-material/Language";
-import ContactMailIcon from "@mui/icons-material/ContactMail";
 import { saveFile } from "../utils/downloadFile";
 
 export const listLinks = [
@@ -29,11 +28,5 @@ export const listLinks = [
 		icon: <AttachmentIcon sx={{ mr: 3 }} />,
 		title: "Mon C-V",
 		handleClick: saveFile,
-	},
-	{
-		id: 5,
-		icon: <ContactMailIcon sx={{ mr: 3 }} />,
-		title: "Contact",
-		url : 'mailto:petitcolaschristopher@gmail.com'
 	},
 ];

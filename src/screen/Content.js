@@ -1,21 +1,20 @@
 import { Grid, Stack, Typography, Card, CardContent, CardHeader, CardActions, IconButton } from "@mui/material";
 import VisibilityIcon from "@mui/icons-material/Visibility";
+import { projects } from "../utils/listProject";
 
 const Content = () => {
-	const array = Array.from({ length: 8 }).fill("x");
 	return (
 		<Grid container>
-			<Grid item >
+			<Grid item>
 				<Typography variant="h2">Lorem ipsum dolor sit amet.</Typography>
 			</Grid>
 			<Stack width="auto" height="300px" direction="row" justifyContent={"space-around"}>
-				{array.map((_, index) => (
-					<Card key={`index ${index}`} sx={{ width: 200, height: "500px" }}>
-						<CardHeader title={index} />
+				{projects.map(({ id, title, description }) => (
+					<Card key={id} sx={{ width: 200, height: "500px" }}>
+						<CardHeader title={id} />
 						<CardContent>
-							<Typography variant="body2" color="text.secondary">
-								This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1
-							</Typography>
+							<Typography>{title}</Typography>
+							<Typography variant="body2">{description}</Typography>
 						</CardContent>
 						<CardActions disableSpacing>
 							<IconButton aria-label="add to favorites">
