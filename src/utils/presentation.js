@@ -3,7 +3,6 @@ export const presentation = [
 		id: 1,
 		title: "Presentation",
 		description: `Je m'appelle Christopher, j'ai 31 ans et je suis jeune diplômé d'une formation de développeur Front-End chez Openclassrooms. J'ai travaillé pendant une dizaine d'année dans la grande distribution sur plusieurs postes. Le manque de perspective d'évolution m'a motivé à m'orienter vers une reconversion professionnelle. J'ai choisi le développement web, car j'ai gardé un très bon souvenir de mon grand frère qui m'a initié au HTML dans mon enfance. J'ai choisi une formation de développeur Front-End pour la satisfaction de pouvoir visualiser le code écrit sur un navigateur. Par curiosité, afin de pouvoir conserver des données, j'ai décidé d'apprendre Node js et la base de données MongoDB pour parvenir a créer une application complète.`,
-		expanded: true,
 	},
 	{
 		id: 2,

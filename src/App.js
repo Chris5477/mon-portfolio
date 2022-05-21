@@ -14,8 +14,8 @@ function App() {
 			{/* <Home /> */}
 			{/* <Content list={projects} /> */}
 			{/* <Content list={presentation} /> */}
-			<Project />
-			{/* <Information /> */}
+			{/* <Project /> */}
+			<Information />
 			<Footer />
 		</div>
 	);
