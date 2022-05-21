@@ -3,6 +3,7 @@ import TopBar from "./components/TopBar";
 import Footer from "./components/Footer";
 import Content from "./screen/Content";
 import Project from "./components/Project";
+import Information from "./components/Information";
 
 function App() {
 	return (
@@ -10,7 +11,8 @@ function App() {
 			<TopBar />
 			{/* <Home /> */}
 			{/* <Content /> */}
-      <Project />
+      {/* <Project /> */}
+      <Information />
 			<Footer />
 		</div>
 	);
