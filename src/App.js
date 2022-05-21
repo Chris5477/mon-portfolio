@@ -9,10 +9,10 @@ function App() {
 	return (
 		<div className="App">
 			<TopBar />
-			{/* <Home /> */}
+			<Home />
 			{/* <Content /> */}
-      {/* <Project /> */}
-      <Information />
+			{/* <Project /> */}
+			{/* <Information /> */}
 			<Footer />
 		</div>
 	);
