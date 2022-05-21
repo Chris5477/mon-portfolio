@@ -1,12 +1,11 @@
 import { Grid, Stack, Typography, Card, CardContent, CardHeader, CardActions, IconButton } from "@mui/material";
-import AddIcon from "@mui/icons-material/Add";
+import VisibilityIcon from "@mui/icons-material/Visibility";
 
-const Projects = () => {
+const Content = () => {
 	const array = Array.from({ length: 8 }).fill("x");
-	console.log(array);
 	return (
 		<Grid container>
-			<Grid item>
+			<Grid item >
 				<Typography variant="h2">Lorem ipsum dolor sit amet.</Typography>
 			</Grid>
 			<Stack width="auto" height="300px" direction="row" justifyContent={"space-around"}>
@@ -20,8 +19,8 @@ const Projects = () => {
 						</CardContent>
 						<CardActions disableSpacing>
 							<IconButton aria-label="add to favorites">
-								<AddIcon />
-								En savoir plus
+								<VisibilityIcon />
+								Voir
 							</IconButton>
 						</CardActions>
 					</Card>
@@ -30,4 +29,4 @@ const Projects = () => {
 		</Grid>
 	);
 };
-export default Projects;
+export default Content;

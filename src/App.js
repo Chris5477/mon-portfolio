@@ -1,15 +1,15 @@
 import Home from "./screen/Home";
 import TopBar from "./components/TopBar";
 import Footer from "./components/Footer";
-import Projects from "./screen/Projects";
+import Content from "./screen/Content";
 
 function App() {
 	return (
 		<div className="App">
 			<TopBar />
-      {/* <Home /> */}
-      <Projects />
-      <Footer />
+			<Home />
+			{/* <Content /> */}
+			<Footer />
 		</div>
 	);
 }
