@@ -1,31 +1,36 @@
-import { Box, Typography, ImageList, ImageListItem, Button } from "@mui/material";
+import { Grid, Typography, ImageList, ImageListItem, Button } from "@mui/material";
 import { projects } from "../utils/listProject";
 
 const Project = () => {
-	const { title, description, logo, illustrations, skillWorked, github } = projects[0]
+	const { title, description, logo, illustrations, skillWorked, github } = projects[11];
 	return (
-		<Box>
-			<img src={logo} alt="project" />
+		<Grid container pl={3} pr={3}>
+			<Grid item xs={12}>
+				<h1>
+					<img className="logo-project slideY-logo" src={logo} alt={title} />
+				</h1>
+			</Grid>
+			<Grid item xs={12} className="slideY-body" sx={{ opacity: "0" }}>
+				<Typography variant="h2" fontSize={30} fontWeight={400} mb={3}>
+					{description}
+				</Typography>
 
-			<Typography variant="h1">{title}</Typography>
-			<Typography variant="h2">{description}</Typography>
-
-			<ul>
-				{skillWorked.map((skill, index) => (
-					<li key={`index ${index}`}>
-						<Typography paragraph>{skill}</Typography>
-					</li>
-				))}
-			</ul>
-			<Button href={github}>Voir sur Github</Button>
-			<Box sx={{ width: 500, height: 450, overflowY: "scroll" }}>
-				<ImageList variant="masonry" cols={3} gap={8}>
-					{illustrations.map((picture, index) => (
-						<ImageListItem key={index}>{<img src={picture} alt="illustration" />}</ImageListItem>
+				<ul>
+					{skillWorked.map((skill, index) => (
+						<li key={`index ${index}`}>
+							<Typography paragraph>{skill}</Typography>
+						</li>
 					))}
-				</ImageList>
-			</Box>
-		</Box>
+				</ul>
+				<Button href={github}>Voir sur Github</Button>
+
+				{illustrations.map((picture, index) => (
+					<Grid item xs={12} className="slideY-illustrations" sx={{ opacity: 0 }} mt={3} key={index}>
+						{<img className="illustration" src={picture} alt="illustration" />}
+					</Grid>
+				))}
+			</Grid>
+		</Grid>
 	);
 };
 export default Project;

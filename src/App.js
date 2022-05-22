@@ -12,9 +12,9 @@ function App() {
 		<div className="App">
 			<TopBar />
 			{/* <Home /> */}
-			<Content title="Mes projets" list={projects} />
+			{/* <Content title="Mes projets" list={projects} /> */}
 			{/* <Content title="À propos de moi" list={presentation} /> */}
-			{/* <Project /> */}
+			<Project />
 			{/* <Information /> */}
 			<Footer />
 		</div>
