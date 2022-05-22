@@ -1,30 +1,30 @@
 import { Grid, Typography } from "@mui/material";
-import me from "../assets/pictures/chrispng.png"
+import me from "../assets/pictures/chrispng.png";
 
 const Home = () => {
 	return (
-		<Grid container>
-			<Grid item xs={12}>
-				<img src={me} alt="profil" />
+		<Grid container width="100%">
+			<Grid item xs={12} mt={10} mb={10}>
+				<img className="profil" src={me} alt="profil" />
 			</Grid>
-			<Grid item>
-				<Typography variant="h2">
+			<Grid item xs={12} mt={10} mb={10}>
+				<Typography variant="h1" fontSize={"50px"} color="primary" pl={3}>
 					Christopher <br /> Petitcolas
 				</Typography>
 
 				<ul>
 					<li>
-						<Typography paragraph>
-						Développeur Front-end spécialisé React
+						<Typography variant={"body2"} mb={1}>
+							Développeur Front-end spécialisé React
 						</Typography>
 					</li>
 					<li>
-						<Typography paragraph>
-						Jeune diplômé Développeur Front-end
+						<Typography variant={"body2"} mb={1}>
+							Jeune diplômé Développeur Front-end
 						</Typography>
 					</li>
 					<li>
-						<Typography paragraph>
+						<Typography variant={"body2"} mb={1}>
 							En cours d'apprentissage de Node.js, MUI Component ou encore Typescript
 						</Typography>
 					</li>
