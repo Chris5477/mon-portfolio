@@ -3,12 +3,13 @@ import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LanguageIcon from "@mui/icons-material/Language";
+import { saveFile } from "../utils/downloadFile";
 
 const Footer = () => {
 	return (
 		<footer>
 			<Stack direction={"row"} justifyContent={window.innerWidth < 600 ? "space-around" : "center"} spacing={2}>
-				<IconButton color="primary" aria-label="Télécharger CV">
+				<IconButton color="primary" aria-label="Télécharger CV" onClick={saveFile}>
 					<Stack alignItems="center">
 						<FileDownloadIcon />
 						<Typography color="primary" variant="subtitle2" fontSize={5}>
