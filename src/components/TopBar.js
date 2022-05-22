@@ -1,6 +1,6 @@
 import { AppBar, Avatar, Box } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import chris from "../assets/pictures/chrispng.png";
+import react from "../assets/icon/react.svg"
 
 const TopBar = () => {
 	const styleAppBar = {
@@ -11,12 +11,12 @@ const TopBar = () => {
 		justifyContent : "space-between",
 		alignItems : "center",
 		boxShadow : "none",
-		padding : "5px 20px"
+		padding : "10px 20px"
 	};
 
 	return (
 		<AppBar position="static" sx={styleAppBar}>
-			<Avatar alt="christopher Petitcolas" src={chris} />
+			<Avatar alt="react" src={react} />
 			<Box>
 				<MenuIcon color="primary" />
 			</Box>

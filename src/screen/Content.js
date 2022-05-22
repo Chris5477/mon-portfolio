@@ -1,7 +1,8 @@
 import { Grid, Stack, Typography, Card, CardContent, CardHeader, CardActions, Button, Divider } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
+import { shadows } from "@mui/system";
 
-const Content = ({ title, list }) => {
+const Content = ({ title, texte, list }) => {
 	const styleCard = {
 		backgroundColor: "grey",
 		width: "250px",
@@ -17,18 +18,30 @@ const Content = ({ title, list }) => {
 		left: "2%",
 	};
 
-	const isDescription = list.find((el) => el.github) ? true : false;
+	const isDescription = title === "Mes projets" ? true : false;
 
 	return (
-		<Grid container mt={20} mb={10} sx={{ overflow: "hidden" }}>
-			<Grid item xs={12} justifyContent="center">
+		<Grid container mt={5} mb={10} sx={{ overflow: "hidden" }}>
+			<Grid item xs={12} justifyContent="center" className="slideY-one" sx={{opacity : 0}}>
 				<Typography variant="h1" fontSize={"50px"} color="primary" pl={3} mb={5}>
 					{title}
 				</Typography>
 			</Grid>
-			<Stack direction="row" height="400px" pl={3} pt={2} pb={2} spacing={4}>
+			<Grid item xs={12} justifyContent="center" className="slideY-two" sx={{opacity : 0}}>
+				<Stack direction="row">
+					{isDescription && (
+						<Typography variant="h2" fontSize={"50px"} fontWeight={600} color="primary" pl={3} mb={5}>
+							{list.length}
+						</Typography>
+					)}
+					<Typography variant="h2" fontSize={"30px"} pl={1} pt={2} mb={2}>
+						{texte}
+					</Typography>
+				</Stack>
+			</Grid>
+			<Stack direction="row" height="400px" pl={3} pt={2} pb={2} spacing={4} className="slideY-three" sx={{opacity : 0}}>
 				{list.map(({ id, title, description }) => (
-					<Card key={id} sx={styleCard}>
+					<Card key={id} sx={styleCard} >
 						<CardHeader
 							title={id < 10 ? `0${id}` : id}
 							titleTypographyProps={{ fontSize: "60px", paddingLeft: "20px" }}

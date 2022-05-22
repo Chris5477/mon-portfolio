@@ -6,7 +6,7 @@
 
 body {
 	width: 100%;
-	height: 100vh;
+	height: auto;
 }
 
 .App {
@@ -27,7 +27,8 @@ ul {
 }
 
 .logo-project {
-	width: 40%;
+	width: 60%;
+	max-width: 600px;
 	object-fit: contain;
 	opacity: 0;
 }
@@ -60,7 +61,7 @@ ul {
 	font-size: 60px;
 	opacity: 0;
 	display: inline;
-	animation: confetti 12s ease-in infinite;
+	animation: confetti 2s ease-in infinite;
 }
 
 .anim-1 {
@@ -79,7 +80,7 @@ ul {
 
 .anim-3 {
 	top: 10%;
-	left: 430%;
+	left: 43%;
 	color: white;
 	animation-delay: 6s;
 }
@@ -99,7 +100,7 @@ ul {
 }
 
 .anim-6 {
-	top: -1%;
+	top: 0;
 	left: 70%;
 	color: #5eafe8;
 	animation-delay: 12s;
@@ -149,4 +150,13 @@ ul {
 	100% {
 		transform: translate(0px, 0px);
 	}
+}
+
+footer {
+	background-color: rgb(223, 223, 223);
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left : 50%;
+	transform : translateX(-50%)
 }

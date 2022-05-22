@@ -2,16 +2,19 @@ import { Grid, Typography, ImageList, ImageListItem, Button } from "@mui/materia
 import { projects } from "../utils/listProject";
 
 const Project = () => {
-	const { title, description, logo, illustrations, skillWorked, github } = projects[11];
+	const { title, description, logo, illustrations, skillWorked, github } = projects[1];
+
+	const regex = new RegExp(/[.webm]$/)
+
 	return (
 		<Grid container pl={3} pr={3}>
-			<Grid item xs={12}>
+			<Grid item xs={12} mt={2} mb={1}>
 				<h1>
 					<img className="logo-project slideY-one" src={logo} alt={title} />
 				</h1>
 			</Grid>
-			<Grid item xs={12} className="slideY-two" sx={{ opacity: "0" }}>
-				<Typography variant="h2" fontSize={30} fontWeight={400} mb={3}>
+			<Grid item xs={12} className="slideY-two" sx={{ opacity: "0" }} mb={2}>
+				<Typography color="primary" variant="h2" fontSize={30} fontWeight={400} mb={3}>
 					{description}
 				</Typography>
 
@@ -24,9 +27,15 @@ const Project = () => {
 				</ul>
 				<Button href={github}>Voir sur Github</Button>
 
-				{illustrations.map((picture, index) => (
+				{illustrations.map((media, index) => (
 					<Grid item xs={12} className="slideY-three" sx={{ opacity: 0 }} mt={3} key={index}>
-						{<img className="illustration" src={picture} alt="illustration" />}
+						{media.match(regex) ? (
+							<video className="illustration" controls>
+								<source src={media} />
+							</video>
+						) : (
+							<img className="illustration" src={media} alt="illustration" />
+						)}
 					</Grid>
 				))}
 			</Grid>
