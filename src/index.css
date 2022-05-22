@@ -26,15 +26,15 @@ ul{
 	opacity: 0;
 }
 
-.slideY-logo {
+.slideY-one {
 	animation: slideY 1s ease-out 0.2s forwards;
 }
 
-.slideY-body{
+.slideY-two{
 	animation: slideY 1s ease-out 0.6s forwards;
 }
 
-.slideY-illustrations{
+.slideY-three{
 	animation: slideY 1s ease-out 0.9s forwards;
 }
 

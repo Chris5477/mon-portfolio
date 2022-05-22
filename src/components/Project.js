@@ -7,10 +7,10 @@ const Project = () => {
 		<Grid container pl={3} pr={3}>
 			<Grid item xs={12}>
 				<h1>
-					<img className="logo-project slideY-logo" src={logo} alt={title} />
+					<img className="logo-project slideY-one" src={logo} alt={title} />
 				</h1>
 			</Grid>
-			<Grid item xs={12} className="slideY-body" sx={{ opacity: "0" }}>
+			<Grid item xs={12} className="slideY-two" sx={{ opacity: "0" }}>
 				<Typography variant="h2" fontSize={30} fontWeight={400} mb={3}>
 					{description}
 				</Typography>
@@ -25,7 +25,7 @@ const Project = () => {
 				<Button href={github}>Voir sur Github</Button>
 
 				{illustrations.map((picture, index) => (
-					<Grid item xs={12} className="slideY-illustrations" sx={{ opacity: 0 }} mt={3} key={index}>
+					<Grid item xs={12} className="slideY-three" sx={{ opacity: 0 }} mt={3} key={index}>
 						{<img className="illustration" src={picture} alt="illustration" />}
 					</Grid>
 				))}

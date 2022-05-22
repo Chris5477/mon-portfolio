@@ -15,7 +15,7 @@ const TopBar = () => {
 	};
 
 	return (
-		<AppBar position="fixed" sx={styleAppBar}>
+		<AppBar position="static" sx={styleAppBar}>
 			<Avatar alt="christopher Petitcolas" src={chris} />
 			<Box>
 				<MenuIcon color="primary" />
