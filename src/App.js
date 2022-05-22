@@ -11,9 +11,9 @@ function App() {
 	return (
 		<div className="App">
 			<TopBar />
-			<Home />
-			{/* <Content list={projects} /> */}
-			{/* <Content list={presentation} /> */}
+			{/* <Home /> */}
+			<Content title="Mes projets" list={projects} />
+			{/* <Content title="À propos de moi" list={presentation} /> */}
 			{/* <Project /> */}
 			{/* <Information /> */}
 			<Footer />
