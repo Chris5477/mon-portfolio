@@ -1,14 +1,4 @@
-import {
-	Grid,
-	Stack,
-	Typography,
-	Card,
-	CardContent,
-	CardHeader,
-	CardActions,
-	IconButton,
-	Divider,
-} from "@mui/material";
+import { Grid, Stack, Typography, Card, CardContent, CardHeader, CardActions, Button, Divider } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 
 const Content = ({ title, list }) => {
@@ -30,18 +20,18 @@ const Content = ({ title, list }) => {
 	const isDescription = list.find((el) => el.github) ? true : false;
 
 	return (
-		<Grid container mt={20} mb={10} sx={{overflow : "hidden"}}>
+		<Grid container mt={20} mb={10} sx={{ overflow: "hidden" }}>
 			<Grid item xs={12} justifyContent="center">
 				<Typography variant="h1" fontSize={"50px"} color="primary" pl={3} mb={5}>
 					{title}
 				</Typography>
 			</Grid>
-			<Stack direction="row" height="400px" pl={3} pt={2} pb={2} spacing={4} >
+			<Stack direction="row" height="400px" pl={3} pt={2} pb={2} spacing={4}>
 				{list.map(({ id, title, description }) => (
 					<Card key={id} sx={styleCard}>
 						<CardHeader
 							title={id < 10 ? `0${id}` : id}
-							titleTypographyProps={{ fontSize: "60px", paddingLeft: "20px"}}
+							titleTypographyProps={{ fontSize: "60px", paddingLeft: "20px" }}
 						/>
 						<Divider variant="middle" />
 						<CardContent>
@@ -51,12 +41,10 @@ const Content = ({ title, list }) => {
 							<Typography paragraph>{isDescription && description}</Typography>
 						</CardContent>
 						<CardActions disableSpacing sx={styleFooterCard}>
-							<IconButton aria-label="add to favorites" size="small">
-								<AddIcon color="primary" />
-							</IconButton>
-							<Typography variant="subtitle2" color="primary">
+							<Button variant="contained" sx={{ paddingLeft: "5px" }}>
+								<AddIcon />
 								Plus
-							</Typography>
+							</Button>
 						</CardActions>
 					</Card>
 				))}
