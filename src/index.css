@@ -42,7 +42,7 @@ ul {
 }
 
 .slideY-three {
-	animation: slideY 1s ease-out 0.9s forwards;
+	animation: slideY 1s ease-out 1.2s forwards;
 }
 
 @keyframes slideY {
@@ -61,7 +61,7 @@ ul {
 	font-size: 60px;
 	opacity: 0;
 	display: inline;
-	animation: confetti 2s ease-in infinite;
+	animation: confetti 12s ease-in infinite;
 }
 
 .anim-1 {
