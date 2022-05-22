@@ -3,12 +3,12 @@ import me from "../assets/pictures/chrispng.png";
 
 const Home = () => {
 	return (
-		<Grid container width="100%">
-			<Grid item xs={12} mt={10} mb={10}>
+		<Grid container width="100%" pl={3} pr={2}>
+			<Grid item xs={12} mt={5} mb={5}>
 				<img className="profil" src={me} alt="profil" />
 			</Grid>
 			<Grid item xs={12} mt={10} mb={10}>
-				<Typography variant="h1" fontSize={"50px"} color="primary" pl={3}>
+				<Typography variant="h1" fontSize={"50px"} color="primary" mb={4}>
 					Christopher <br /> Petitcolas
 				</Typography>
 
