@@ -22,10 +22,8 @@ function App() {
 			<div className="confetti anim-10">.</div>
 			<TopBar />
 			{/* <Home /> */}
-			 {/* <Content title="Mes projets" texte={"projets réalisés"} list={projects} /> */}
+			<Content title="Mes projets" texte={"projets réalisés"} list={projects} />
 			{/* <Content title="À propos de moi" list={presentation} /> */}
-			 <Project />
-			{/* <Information />  */}
 			<Footer />
 		</div>
 	);

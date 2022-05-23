@@ -1,13 +1,21 @@
-import { Grid, Typography, ImageList, ImageListItem, Button } from "@mui/material";
+import { Grid, Typography, Button } from "@mui/material";
 import { projects } from "../utils/listProject";
 
-const Project = () => {
-	const { title, description, logo, illustrations, skillWorked, github } = projects[2];
+const Project = ({ index, setModal }) => {
+	const { title, description, logo, illustrations, skillWorked, github } = projects[index];
 
-	const regex = new RegExp(/[.webm]$/)
+	const regex = new RegExp(/[.webm]$/);
 
 	return (
 		<Grid container pl={3} pr={3}>
+			<Button
+				variant="contained"
+				color="primary"
+				sx={{ position: "absolute", top: "2%", right: "4%", borderRadius : "100px" }}
+				onClick={() => setModal(false)}
+			>
+				X
+			</Button>
 			<Grid item xs={12} mt={2} mb={1}>
 				<h1>
 					<img className="logo-project slideY-one" src={logo} alt={title} />
@@ -28,7 +36,7 @@ const Project = () => {
 				<Button href={github}>Voir sur Github</Button>
 
 				{illustrations.map((media, index) => (
-					<Grid item xs={12} className="slideY-three" sx={{ opacity: 0 }} mt={3} key={index}>
+					<Grid item xs={12} className="slideY-three" sx={{ opacity: 0 }} mt={3} mb={2} key={index}>
 						{media.match(regex) ? (
 							<video className="illustration" controls>
 								<source src={media} />

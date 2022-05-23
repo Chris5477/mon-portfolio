@@ -3,6 +3,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import react from "../assets/icon/react.svg";
 import { useState } from "react";
 import Menu from "./Menu";
+import { borderRadius } from "@mui/system";
 
 const styleAppBar = {
 	width: "100%",
@@ -19,7 +20,7 @@ const TopBar = () => {
 	const [open, setOpen] = useState(false);
 
 	const classMenu = open ? "openModal" : "closeModal";
-	console.log(classMenu, open)
+	console.log(classMenu, open);
 
 	return (
 		<AppBar position="static" sx={styleAppBar}>

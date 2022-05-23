@@ -1,21 +1,31 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography, Button } from "@mui/material";
 import { useEffect } from "react";
 import { presentation } from "../utils/presentation";
 
-const Information = () => {
-	const { title, description } = presentation[6];
+const Information = ({ index, setModal }) => {
+	const { title, description } = presentation[index];
 	useEffect(() => {
-		document.querySelector("p").innerHTML = description.replaceAll("*", "<br/><br/>");
+		document.querySelector(".description").innerHTML = description.replaceAll("*", "<br/><br/>");
 	});
 	return (
 		<Grid container pl={3} pr={2}>
-			<Grid item xs={12} className="slideY-one" mt={5} mb={5} sx={{ opacity: 0 }}>
+			<Button
+				variant="contained"
+				color="primary"
+				sx={{ position: "absolute", top: "2%", right: "4%", borderRadius: "100px" }}
+				onClick={() => setModal(false)}
+			>
+				X
+			</Button>
+			<Grid item xs={12} className="slideY-one" mt={8} mb={5} sx={{ opacity: 0 }}>
 				<Typography color="primary" variant="h1" fontSize={"50px"}>
 					{title}
 				</Typography>
 			</Grid>
 			<Grid item xs={12} className="slideY-two" sx={{ opacity: 0 }}>
-				<Typography paragraph>{description}</Typography>
+				<Typography className="description" paragraph>
+					{description}
+				</Typography>
 			</Grid>
 		</Grid>
 	);
