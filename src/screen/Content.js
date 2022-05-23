@@ -1,6 +1,5 @@
 import { Grid, Stack, Typography, Card, CardContent, CardHeader, CardActions, Button, Divider } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
-import { shadows } from "@mui/system";
 
 const Content = ({ title, texte, list }) => {
 	const styleCard = {
