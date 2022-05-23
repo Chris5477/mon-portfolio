@@ -2,7 +2,7 @@ import { Grid, Typography, ImageList, ImageListItem, Button } from "@mui/materia
 import { projects } from "../utils/listProject";
 
 const Project = () => {
-	const { title, description, logo, illustrations, skillWorked, github } = projects[1];
+	const { title, description, logo, illustrations, skillWorked, github } = projects[2];
 
 	const regex = new RegExp(/[.webm]$/)
 
