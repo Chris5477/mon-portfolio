@@ -175,7 +175,8 @@ footer {
 }
 
 .openModal {
-	background-color: #1a76d2;
+	/* background-color: #1a76d2; */
+	background-color: orange;
 	position: fixed;
 	top: 0%;
 	right: 0%;
@@ -183,6 +184,7 @@ footer {
 	transform-origin: right;
 	transition: 0.7s;
 	width: 100%;
+	max-width: 600px;
 	height: 100%;
 
 }
