@@ -17,14 +17,11 @@ export const theme = (colorPalette) =>
 					},
 				},
 			},
-			MuiTypography: {
-				defaultProps: {
-					color: "#1976d2",
-				},
-			},
+
 			MuiButton: {
 				defaultProps: {
 					color: colorPalette,
+					variant: "outlined",
 				},
 			},
 			MuiIconButton: {
@@ -67,6 +64,11 @@ export const theme = (colorPalette) =>
 				main: "#1976d2",
 				light: "#63a4ff",
 				dark: "#004ba0",
+			},
+			secondary: {
+				main: "#90d1f4",
+				light: "#c3ffff",
+				dark: "#5da0c1",
 			},
 		},
 	});
