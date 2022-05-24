@@ -24,16 +24,16 @@ export const listLinks = [
 		title: "WeLovesDevs",
 		url: "https://christopherpetitcola.welovedevs.com",
 	},
-	{
-		id: 4,
-		icon: <AttachmentIcon sx={{ mr: 3 }} />,
-		title: "Mon C-V",
-		handleClick: saveFile,
-	},
-	{
-		id: 5,
-		icon: <ContactMailIcon sx={{ mr: 3 }} />,
-		title: "Contact",
-		url : 'mailto:petitcolaschristopher@gmail.com'
-	},
+	// {
+	// 	id: 4,
+	// 	icon: <AttachmentIcon sx={{ mr: 3 }} />,
+	// 	title: "Mon C-V",
+	// 	handleClick: saveFile,
+	// },
+	// {
+	// 	id: 5,
+	// 	icon: <ContactMailIcon sx={{ mr: 3 }} />,
+	// 	title: "Contact",
+	// 	url : 'mailto:petitcolaschristopher@gmail.com'
+	// },
 ];

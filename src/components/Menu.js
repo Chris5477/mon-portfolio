@@ -1,8 +1,6 @@
 import { Box, Grid, Button, Typography, Stack } from "@mui/material";
 import { listLinks } from "../utils/listsLinks";
-import HomeIcon from "@mui/icons-material/Home";
-import WebIcon from "@mui/icons-material/Web";
-import InfoIcon from "@mui/icons-material/Info";
+import { saveFile } from "../utils/downloadFile";
 
 const Menu = ({ classComponent, setterModal }) => {
 	return (
@@ -15,38 +13,35 @@ const Menu = ({ classComponent, setterModal }) => {
 				>
 					X
 				</Button>
-				<Grid item xs={12}>
-					<Button fullWidth aria-label="aller sur homepage">
-						<Stack direction="row" justifyContent="flex-start" alignItems="center" spacing={2} fontSize={20} width="80%">
-							<HomeIcon />
-							Home
-						</Stack>
-					</Button>
-				</Grid>
-				<Grid item xs={12}>
-					<Button fullWidth aria-label="aller sur projets">
-						<Stack direction="row" justifyContent="flex-start" alignItems="center" spacing={2} fontSize={20} width="80%">
-							<WebIcon />
-							Mes projets
-						</Stack>
-					</Button>
-				</Grid>
-				<Grid item xs={12}>
-					<Button fullWidth aria-label="aller sur about">
-						<Stack direction="row" justifyContent="flex-start" alignItems="center" spacing={2} fontSize={20} width="80%">
-							<InfoIcon />À propos de moi
-						</Stack>
-					</Button>
-				</Grid>
+
 				<Grid item xs={12}>
 					{listLinks.map(({ id, icon, title, url, handleClick }) => (
-						<Button fullWidth key={id} aria-label="Télécharger CV" href={url} onClick={handleClick && handleClick}>
-							<Stack direction="row" justifyContent="flex-start" alignItems="center" spacing={2} fontSize={20} width="80%">
+						<Button fullWidth key={id} href={url}>
+							<Stack
+								direction="row"
+								justifyContent="flex-start"
+								alignItems="center"
+								spacing={2}
+								fontSize={20}
+								width="80%"
+							>
 								{icon}
 								{title}
 							</Stack>
 						</Button>
 					))}
+				</Grid>
+				<Grid item xs={12}>
+					<Typography>Me contacter :</Typography>
+
+					<Button href="tel:+0626411949">Par téléphone : 06-26-41-19-49</Button>
+					<Button href="mailto:petitcolaschristopher@gmail.com">Par e-mail : petitcolaschristopher@gmail.com </Button>
+				</Grid>
+
+				<Grid item xs={12}>
+					<Typography>Télécharger mon CV :</Typography>
+					<Button onClick={saveFile}>Télécharger</Button>
+						
 				</Grid>
 
 				<Typography
