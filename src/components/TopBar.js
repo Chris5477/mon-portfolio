@@ -1,6 +1,6 @@
 import { AppBar, Avatar, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import react from "../assets/icon/react.svg";
+import react from "../assets/icon/react2.svg";
 import { useState } from "react";
 import Menu from "./Menu";
 

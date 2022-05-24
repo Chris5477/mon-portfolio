@@ -2,14 +2,23 @@ import Home from "./screen/Home";
 import TopBar from "./components/TopBar";
 import Footer from "./components/Footer";
 import Content from "./screen/Content";
-import Project from "./components/Project";
-import Information from "./components/Information";
 import { projects } from "./utils/listProject";
 import { presentation } from "./utils/presentation";
 import { theme } from "./utils/theme.js";
 import { ThemeProvider } from "@mui/material/styles";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { createImg } from "./utils/animationLogo";
+import react1 from "./assets/icon/react1.svg";
+import react2 from "./assets/icon/react2.svg";
+import react3 from "./assets/icon/react3.svg";
+
 function App() {
+	const pathImg = [react1, react2, react3];
+
+	useEffect(() => {
+		setInterval(() => createImg(pathImg), 3000);
+	});
+
 	const pages = [
 		<Home />,
 		<Content title="Mes projets" texte={"projets réalisés"} list={projects} />,
@@ -21,16 +30,6 @@ function App() {
 	return (
 		<div className="App">
 			<ThemeProvider theme={theme("primary")}>
-				<div className="confetti anim-1">.</div>
-				<div className="confetti anim-2">.</div>
-				<div className="confetti anim-3">.</div>
-				<div className="confetti anim-4">.</div>
-				<div className="confetti anim-5">.</div>
-				<div className="confetti anim-6">.</div>
-				<div className="confetti anim-7">.</div>
-				<div className="confetti anim-8">.</div>
-				<div className="confetti anim-9">.</div>
-				<div className="confetti anim-10">.</div>
 				<TopBar />
 				{pages[indexPage]}
 				<Footer handleClick={setIndexPage} />

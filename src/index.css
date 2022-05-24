@@ -56,85 +56,14 @@ ul {
 	width: 100%;
 }
 
-.confetti {
+.react {
+	width: 20px;
+	height: 20px;
+	animation: parade 12s linear;
 	position: absolute;
-	font-size: 60px;
-	opacity: 0;
-	display: inline;
-	animation: confetti 12s ease-in infinite;
 }
 
-.anim-1 {
-	top: 20%;
-	left: 80%;
-	color: #5eafe8;
-	animation-delay: 2s;
-}
-
-.anim-2 {
-	top: 10%;
-	left: 90%;
-	color: white;
-	animation-delay: 4s;
-}
-
-.anim-3 {
-	top: 10%;
-	left: 43%;
-	color: white;
-	animation-delay: 6s;
-}
-
-.anim-4 {
-	top: 60%;
-	left: 80%;
-	color: #5eafe893;
-	animation-delay: 8s;
-}
-
-.anim-5 {
-	top: 80%;
-	left: 20%;
-	color: #5eafe8;
-	animation-delay: 10s;
-}
-
-.anim-6 {
-	top: 0;
-	left: 70%;
-	color: #5eafe8;
-	animation-delay: 12s;
-}
-
-.anim-7 {
-	top: 86%;
-	left: 90%;
-	color: white;
-	animation-delay: 14s;
-}
-
-.anim-8 {
-	top: 95%;
-	left: 50%;
-	color: #5eafe893;
-	animation-delay: 16s;
-}
-
-.anim-9 {
-	top: 5%;
-	left: 12%;
-	color: white;
-	animation-delay: 18s;
-}
-
-.anim-10 {
-	top: 62%;
-	left: 92%;
-	color: #5eafe8;
-	animation-delay: 20s;
-}
-
-@keyframes confetti {
+@keyframes parade {
 	0% {
 		transform: translate(-700px, 600px);
 	}
@@ -152,7 +81,7 @@ ul {
 	}
 }
 
-.bottomNav{
+.bottomNav {
 	background-color: rgb(223, 223, 223);
 	width: 100%;
 	position: fixed;
@@ -216,7 +145,7 @@ ul {
 }
 
 @keyframes rotation {
-	100%{
+	100% {
 		transform: rotateZ(120deg);
 	}
 }
