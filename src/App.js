@@ -7,11 +7,18 @@ import Information from "./components/Information";
 import { projects } from "./utils/listProject";
 import { presentation } from "./utils/presentation";
 import { theme } from "./utils/theme.js";
-import {ThemeProvider} from "@mui/material/styles"
+import { ThemeProvider } from "@mui/material/styles";
+import { useState } from "react";
 function App() {
-	console.log(theme)
-	return (
+	const pages = [
+		<Home />,
+		<Content title="Mes projets" texte={"projets réalisés"} list={projects} />,
+		<Content title="À propos de moi" list={presentation} />,
+	];
 
+	const [indexPage, setIndexPage] = useState(0);
+
+	return (
 		<div className="App">
 			<ThemeProvider theme={theme("primary")}>
 				<div className="confetti anim-1">.</div>
@@ -25,10 +32,8 @@ function App() {
 				<div className="confetti anim-9">.</div>
 				<div className="confetti anim-10">.</div>
 				<TopBar />
-				<Home />
-				{/* <Content title="Mes projets" texte={"projets réalisés"} list={projects} /> */}
-				{/* <Content title="À propos de moi" list={presentation} /> */}
-				<Footer />
+				{pages[indexPage]}
+				<Footer handleClick={setIndexPage} />
 			</ThemeProvider>
 		</div>
 	);
