@@ -59,7 +59,7 @@ ul {
 .react {
 	width: 20px;
 	height: 20px;
-	animation: parade 12s linear;
+	animation: parade 15s linear;
 	position: absolute;
 }
 
@@ -78,6 +78,7 @@ ul {
 
 	100% {
 		transform: translate(0px, 0px);
+		opacity: 0;
 	}
 }
 
@@ -115,7 +116,8 @@ ul {
 	height: 100%;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
+	padding-top: 80px;
 }
 
 .openProject {

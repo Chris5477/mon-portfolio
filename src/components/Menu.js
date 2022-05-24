@@ -72,7 +72,7 @@ const Menu = ({ classComponent, setterModal }) => {
 					textAlign="center"
 					variant="body2"
 					fontSize={16}
-					sx={{ position: "absolute", bottom: "2%", left: "50%", transform: "translateX(-50%)" }}
+					sx={{ position: "absolute", bottom: "8%", left: "50%", transform: "translateX(-50%)" }}
 				>
 					Application React -- Mui Component -- 2022
 				</Typography>

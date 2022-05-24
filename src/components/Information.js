@@ -8,7 +8,7 @@ const Information = ({ index, setModal }) => {
 		document.querySelector(".description").innerHTML = description.replaceAll("*", "<br/><br/>");
 	});
 	return (
-		<Grid container pl={3} pr={2}>
+		<Grid container pl={3} pr={2} >
 			<Button
 				variant="contained"
 				sx={{ position: "absolute", top: "2%", right: "4%", borderRadius: "100px" }}
@@ -17,11 +17,11 @@ const Information = ({ index, setModal }) => {
 				X
 			</Button>
 			<Grid item xs={12} className="slideY-one" mt={8} mb={5} sx={{ opacity: 0 }}>
-				<Typography  variant="h1" fontSize={"50px"}>
+				<Typography  color="primary" variant="h1" >
 					{title}
 				</Typography>
 			</Grid>
-			<Grid item xs={12} className="slideY-two" sx={{ opacity: 0 }}>
+			<Grid item xs={12} className="slideY-two" sx={{ opacity: 0 }} mb={7}>
 				<Typography className="description" paragraph>
 					{description}
 				</Typography>

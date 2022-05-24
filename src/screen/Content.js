@@ -51,14 +51,14 @@ const Content = ({ title, texte, list }) => {
 							{list.length}
 						</Typography>
 					)}
-					<Typography variant="h2" fontSize={"30px"} pl={1} pt={2} mb={2}>
+					<Typography variant="h2" pl={1} pt={2} mb={2}>
 						{texte}
 					</Typography>
 				</Stack>
 			</Grid>
 			<Stack
 				direction="row"
-				height="400px"
+				height="500px"
 				pl={3}
 				pt={2}
 				pb={2}

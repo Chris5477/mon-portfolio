@@ -3,13 +3,13 @@ const setPos = (value) => Math.trunc(Math.random() * value )
 
 export const createImg = (array) => {
     const img = document.createElement("img");
-    document.querySelector(".App").append(img);
+    document.body.append(img);
     img.className = "react";
     img.setAttribute("src", array[setPos(3)]);
     img.setAttribute("alt", "react");
-    const posX = `${setPos(window.innerWidth)}px`;
-    const posY = `${setPos(window.innerHeight / 2)}px`;
+    const posX = `${setPos(100)}%`;
+    const posY = `${setPos(100)}%`;
     img.style.top = posX;
     img.style.left = posY;
-    setTimeout(() => img.remove(), 12000);
+    setTimeout(() => img.remove(), 15000);
 };

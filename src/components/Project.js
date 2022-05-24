@@ -21,7 +21,7 @@ const Project = ({ index, setModal }) => {
 				</h1>
 			</Grid>
 			<Grid item xs={12} className="slideY-two" sx={{ opacity: "0" }} mb={2}>
-				<Typography variant="h2" fontSize={30} fontWeight={400} mb={3}>
+				<Typography variant="h2" fontWeight={400} mb={3}>
 					{description}
 				</Typography>
 

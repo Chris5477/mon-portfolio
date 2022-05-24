@@ -15,9 +15,9 @@ import react3 from "./assets/icon/react3.svg";
 function App() {
 	const pathImg = [react1, react2, react3];
 
-	useEffect(() => {
-		setInterval(() => createImg(pathImg), 3000);
-	});
+	// useEffect(() => {
+	// 	setInterval(() => createImg(pathImg), 3000);
+	// });
 
 	const pages = [
 		<Home />,
@@ -26,13 +26,14 @@ function App() {
 	];
 
 	const [indexPage, setIndexPage] = useState(0);
+	const [open, setOpen] = useState(false);
 
 	return (
 		<div className="App">
 			<ThemeProvider theme={theme("primary")}>
-				<TopBar />
+				<TopBar handleClick={setIndexPage} open={open} setOpen={setOpen}/>
 				{pages[indexPage]}
-				<Footer handleClick={setIndexPage} />
+				<Footer handleClick={setIndexPage} setOpen={setOpen}  />
 			</ThemeProvider>
 		</div>
 	);

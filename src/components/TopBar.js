@@ -4,8 +4,8 @@ import react from "../assets/icon/react2.svg";
 import { useState } from "react";
 import Menu from "./Menu";
 
-const TopBar = () => {
-	const [open, setOpen] = useState(false);
+const TopBar = ({open, setOpen}) => {
+	
 
 	const classMenu = open ? "openModal" : "closeModal";
 
