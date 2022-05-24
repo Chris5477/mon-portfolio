@@ -8,7 +8,7 @@ const Home = () => {
 				<img className="profil" src={me} alt="profil" />
 			</Grid>
 			<Grid item xs={12} mt={10} mb={10}>
-				<Typography variant="h1" fontSize={"50px"} color="primary" mb={4}>
+				<Typography variant="h1" fontSize={"50px"} mb={4}>
 					Christopher <br /> Petitcolas
 				</Typography>
 

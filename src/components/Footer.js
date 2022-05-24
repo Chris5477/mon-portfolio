@@ -9,21 +9,21 @@ const Footer = () => {
 	return (
 		<footer>
 			<Stack direction={"row"} justifyContent={window.innerWidth < 600 ? "space-around" : "center"} spacing={2}>
-				<IconButton color="primary" aria-label="Télécharger CV" onClick={saveFile}>
+				<IconButton aria-label="Télécharger CV" onClick={saveFile}>
 					<Stack alignItems="center">
 						<FileDownloadIcon />
-						<Typography color="primary" variant="subtitle2" fontSize={5}>
+						<Typography variant="subtitle2" fontSize={5}>
 							Télécharger CV
 						</Typography>
 					</Stack>
 				</IconButton>
-				<IconButton color="primary" aria-label="Lien linkedin">
+				<IconButton aria-label="Lien linkedin">
 					<LinkedInIcon />
 				</IconButton>
-				<IconButton color="primary" aria-label="Lien Github">
+				<IconButton aria-label="Lien Github">
 					<GitHubIcon />
 				</IconButton>
-				<IconButton color="primary" aria-label="Lien WelovesDev">
+				<IconButton aria-label="Lien WelovesDev">
 					<LanguageIcon />
 				</IconButton>
 			</Stack>

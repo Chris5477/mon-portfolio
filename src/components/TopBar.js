@@ -5,17 +5,6 @@ import { useState } from "react";
 import Menu from "./Menu";
 import { borderRadius } from "@mui/system";
 
-const styleAppBar = {
-	width: "100%",
-	backgroundColor: "transparent",
-	display: "flex",
-	flexDirection: "row",
-	justifyContent: "space-between",
-	alignItems: "center",
-	boxShadow: "none",
-	padding: "10px 20px",
-};
-
 const TopBar = () => {
 	const [open, setOpen] = useState(false);
 
@@ -23,10 +12,10 @@ const TopBar = () => {
 	console.log(classMenu, open);
 
 	return (
-		<AppBar position="static" sx={styleAppBar}>
+		<AppBar position="static" >
 			<Avatar alt="react" src={react} />
 			<IconButton onClick={() => setOpen(true)}>
-				<MenuIcon color="primary" />
+				<MenuIcon />
 			</IconButton>
 			<Menu classComponent={classMenu} setterModal={setOpen} />
 		</AppBar>

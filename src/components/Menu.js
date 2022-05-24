@@ -10,7 +10,6 @@ const Menu = ({ classComponent, setterModal }) => {
 			<Grid container spacing={5}>
 				<Button
 					variant="contained"
-					color="primary"
 					sx={{ position: "absolute", top: "2%", right: "2%" }}
 					onClick={() => setterModal(false)}
 				>

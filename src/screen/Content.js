@@ -15,28 +15,11 @@ import { useState } from "react";
 import Project from "../components/Project";
 import Information from "../components/Information";
 
-const styleCard = {
-	backgroundColor: "grey",
-	width: "250px",
-	height: "350px",
-	borderRadius: "8px",
-	borderRadius: "12px",
-	position: "relative",
-};
-
-const styleFooterCard = {
-	position: "absolute",
-	bottom: "2%",
-	left: "2%",
-};
-
-
-
 const Content = ({ title, texte, list }) => {
 	const [index, setIndex] = useState(0);
 	const [modal, setModal] = useState(false);
 
-	const classBox = modal ? "openProject" : "closeProject"
+	const classBox = modal ? "openProject" : "closeProject";
 
 	const isDescription = title === "Mes projets" ? true : false;
 	let component;
@@ -56,15 +39,15 @@ const Content = ({ title, texte, list }) => {
 
 	return (
 		<Grid container mt={5} mb={10} sx={{ overflow: "hidden" }}>
-			<Grid item xs={12} justifyContent="center" className="slideY-one" sx={{ opacity: 0 }}>
-				<Typography variant="h1" fontSize={"50px"} color="primary" pl={3} mb={5}>
+			<Grid item xs={12} className="slideY-one" sx={{ opacity: 0 }}>
+				<Typography variant="h1" fontSize={"50px"} pl={3} mb={5}>
 					{title}
 				</Typography>
 			</Grid>
-			<Grid item xs={12} justifyContent="center" className="slideY-two" sx={{ opacity: 0 }}>
+			<Grid item xs={12} className="slideY-two" sx={{ opacity: 0 }}>
 				<Stack direction="row">
 					{isDescription && (
-						<Typography variant="h2" fontSize={"50px"} fontWeight={600} color="primary" pl={3} mb={5}>
+						<Typography variant="h2" fontSize={"50px"} fontWeight={600} pl={3} mb={5}>
 							{list.length}
 						</Typography>
 					)}
@@ -84,11 +67,8 @@ const Content = ({ title, texte, list }) => {
 				sx={{ opacity: 0 }}
 			>
 				{list.map(({ id, title, description }) => (
-					<Card key={id} sx={styleCard}>
-						<CardHeader
-							title={id < 10 ? `0${id}` : id}
-							titleTypographyProps={{ fontSize: "60px", paddingLeft: "20px" }}
-						/>
+					<Card key={id}>
+						<CardHeader title={id < 10 ? `0${id}` : id} />
 						<Divider variant="middle" />
 						<CardContent>
 							<Typography variant="h5" mb={2}>
@@ -96,7 +76,7 @@ const Content = ({ title, texte, list }) => {
 							</Typography>
 							<Typography paragraph>{isDescription && description}</Typography>
 						</CardContent>
-						<CardActions disableSpacing sx={styleFooterCard}>
+						<CardActions disableSpacing>
 							<Button variant="contained" sx={{ paddingLeft: "5px" }} onClick={() => setProject(id)}>
 								<AddIcon />
 								Plus
@@ -105,7 +85,7 @@ const Content = ({ title, texte, list }) => {
 					</Card>
 				))}
 			</Stack>
-			<Box className={classBox} >{component}</Box>
+			<Box className={classBox}>{component}</Box>
 		</Grid>
 	);
 };
