@@ -18,6 +18,16 @@ export const theme = (colorPalette) =>
 				},
 			},
 
+			MuiBottomNavigation: {
+				styleOverrides: {
+					root: {
+						backgroundColor: "rgb(223, 223, 223)",
+						width: "100%",
+						position: "fixed",
+						bottom: 0,
+					},
+				},
+			},
 			MuiButton: {
 				defaultProps: {
 					color: colorPalette,

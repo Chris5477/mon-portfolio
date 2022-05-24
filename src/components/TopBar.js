@@ -11,7 +11,7 @@ const TopBar = () => {
 
 	return (
 		<AppBar position="static">
-			<Avatar alt="react" src={react} />
+			<Avatar className="rotate" alt="react" src={react} />
 			<IconButton onClick={() => setOpen(true)}>
 				<MenuIcon />
 			</IconButton>

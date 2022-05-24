@@ -47,7 +47,7 @@ const Content = ({ title, texte, list }) => {
 			<Grid item xs={12} className="slideY-two" sx={{ opacity: 0 }}>
 				<Stack direction="row">
 					{isDescription && (
-						<Typography variant="h2" fontSize={"50px"} fontWeight={600} pl={3} mb={5}>
+						<Typography color="primary" variant="h2" fontSize={"50px"} fontWeight={600} pl={3} mb={5}>
 							{list.length}
 						</Typography>
 					)}
@@ -77,7 +77,7 @@ const Content = ({ title, texte, list }) => {
 							<Typography paragraph>{isDescription && description}</Typography>
 						</CardContent>
 						<CardActions disableSpacing>
-							<Button variant="contained" sx={{ paddingLeft: "5px" }} onClick={() => setProject(id)}>
+							<Button sx={{ paddingLeft: "5px" }} onClick={() => setProject(id)}>
 								<AddIcon />
 								Plus
 							</Button>
