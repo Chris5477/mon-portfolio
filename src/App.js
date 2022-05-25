@@ -16,14 +16,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
 	const pathImg = [react1, react2, react3];
 
-	useEffect(() => {
-		setInterval(() => createImg(pathImg), 3000);
-	});
+	// useEffect(() => {
+	// 	setInterval(() => createImg(pathImg), 3000);
+	// });
 
 	const pages = [
 		<Home />,
 		<Content title="Mes projets" texte={"projets réalisés"} list={projects} />,
-		<Content title="À propos de moi" list={presentation} />,
+		<Content title="Qui je suis ?" texte="résentation" list={presentation} />,
 	];
 
 	const [indexPage, setIndexPage] = useState(0);
@@ -35,7 +35,7 @@ function App() {
 				<TopBar handleClick={setIndexPage} open={open} setOpen={setOpen}/>
 				<BrowserRouter>
 				<Routes>
-					{/* <Route exact path="/" element={<Home />} /> */}
+					
 					<Route exact path="/mon-portfolio/" element={pages[indexPage]} />
 				</Routes>
 				</BrowserRouter>

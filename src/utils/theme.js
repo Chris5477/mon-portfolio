@@ -1,6 +1,5 @@
 import { createTheme } from "@mui/material/styles";
 
-
 export const theme = (colorPalette) =>
 	createTheme({
 		components: {
@@ -26,7 +25,7 @@ export const theme = (colorPalette) =>
 						width: "100%",
 						position: "fixed",
 						bottom: 0,
-						zIndex: 1000
+						zIndex: 1000,
 					},
 				},
 			},
@@ -45,7 +44,7 @@ export const theme = (colorPalette) =>
 				styleOverrides: {
 					root: {
 						backgroundColor: "#FFF",
-						boxShadow: "2px 2px 10px black",
+						boxShadow: "2px 2px 15px rgba(0, 0, 0, 0.515)",
 						width: 250,
 						height: 400,
 						borderRadius: "20px",
@@ -83,23 +82,21 @@ export const theme = (colorPalette) =>
 				dark: "#5da0c1",
 			},
 		},
-		typography : {
-			h1 : {
-				fontSize : window.innerWidth / 100 + 50 + "px",
-				color : "#1976d2",
-				fontWeight : 400
+		typography: {
+			h1: {
+				fontSize: window.innerWidth / 100 + 50 + "px",
+				color: "#1976d2",
+				fontWeight: 400,
 			},
-			h2 : {
-				fontSize : window.innerWidth / 100 + 30 + "px",
-				fontWeight : 300
+			h2: {
+				fontSize: window.innerWidth / 100 + 30 + "px",
+				fontWeight: 300,
 			},
-			h3 : {
-				fontSize : window.innerWidth / 100 + 20 + "px",
+			h3: {
+				fontSize: window.innerWidth / 100 + 20 + "px",
 			},
-			body1 : {
-				fontSize : 18 + "px"
+			body1: {
+				fontSize: 18 + "px",
 			},
-
-	
-		}
+		},
 	});

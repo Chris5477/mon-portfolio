@@ -19,11 +19,17 @@ ul {
 	padding-left: 20px;
 }
 
+.textHomePage::first-letter {
+	color: #1976d2;
+	font-size: 20px;
+	font-weight: 500;
+}
+
 .profil {
 	width: 50%;
 	object-fit: contain;
 	max-width: 400px;
-	transform: translate(50%, 20%);
+	transform: translate(50%, 10%);
 }
 
 .logo-project {
@@ -151,4 +157,19 @@ ul {
 	100% {
 		transform: rotateZ(120deg);
 	}
+}
+
+.logoCard {
+	width: 100%;
+	opacity: 0.1;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.description::first-letter {
+	color: #1976d2;
+	font-size: 40px;
+	font-weight: 700;
 }

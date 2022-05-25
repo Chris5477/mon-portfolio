@@ -1,6 +1,8 @@
 import { Grid, Typography, Button } from "@mui/material";
 import { useEffect } from "react";
 import { presentation } from "../utils/presentation";
+import CloseIcon from "@mui/icons-material/Close";
+
 
 const Information = ({ index, setModal }) => {
 	const { title, description } = presentation[index];
@@ -8,16 +10,16 @@ const Information = ({ index, setModal }) => {
 		document.querySelector(".description").innerHTML = description.replaceAll("*", "<br/><br/>");
 	});
 	return (
-		<Grid container pl={3} pr={2} >
+		<Grid container pl={3} pr={2} sx={{ backgroundColor: "#FFF" }}>
 			<Button
-				variant="contained"
+				variant="text"
 				sx={{ position: "absolute", top: "2%", right: "4%", borderRadius: "100px" }}
 				onClick={() => setModal(false)}
 			>
-				X
+				<CloseIcon fontSize="large" />
 			</Button>
-			<Grid item xs={12} className="slideY-one" mt={8} mb={5} sx={{ opacity: 0 }}>
-				<Typography  color="primary" variant="h1"  >
+			<Grid item xs={12} className="slideY-one" mt={2} mb={1} sx={{ opacity: 0 }}>
+				<Typography color="primary" variant="h1">
 					{title}
 				</Typography>
 			</Grid>

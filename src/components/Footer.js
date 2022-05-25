@@ -1,4 +1,4 @@
-import {BottomNavigation, BottomNavigationAction } from "@mui/material";
+import { BottomNavigation, BottomNavigationAction } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import WebIcon from "@mui/icons-material/Web";
 import InfoIcon from "@mui/icons-material/Info";
@@ -12,9 +12,9 @@ const Footer = ({ handleClick, setOpen }) => {
 	};
 
 	const changePage = (page) => {
-		handleClick(page)
-		setOpen(false)
-	}
+		handleClick(page);
+		setOpen(false);
+	};
 
 	return (
 		<BottomNavigation value={value} onChange={handleChange}>

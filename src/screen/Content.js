@@ -38,7 +38,7 @@ const Content = ({ title, texte, list }) => {
 	};
 
 	return (
-		<Grid container mt={5} mb={10} sx={{ overflow: "hidden" }}>
+		<Grid container mt={2} sx={{ overflow: "hidden" }}>
 			<Grid item xs={12} className="slideY-one" sx={{ opacity: 0 }}>
 				<Typography variant="h1" fontSize={"50px"} pl={3} mb={5}>
 					{title}
@@ -46,12 +46,16 @@ const Content = ({ title, texte, list }) => {
 			</Grid>
 			<Grid item xs={12} className="slideY-two" sx={{ opacity: 0 }}>
 				<Stack direction="row">
-					{isDescription && (
-						<Typography color="primary" variant="h2" fontSize={"50px"} fontWeight={600} pl={3} mb={5}>
+					{isDescription ? (
+						<Typography color="primary" variant="h2" fontSize={"50px"} fontWeight={600} pl={3} pr={1} mb={5}>
 							{list.length}
 						</Typography>
+					) : (
+						<Typography color="primary" variant="h2" fontSize={"50px"} fontWeight={400} pl={3} mb={5}>
+							P
+						</Typography>
 					)}
-					<Typography variant="h2" pl={1} pt={2} mb={2}>
+					<Typography variant="h2" pt={2} mb={2}>
 						{texte}
 					</Typography>
 				</Stack>
@@ -66,8 +70,9 @@ const Content = ({ title, texte, list }) => {
 				className="slideY-three"
 				sx={{ opacity: 0 }}
 			>
-				{list.map(({ id, title, description }) => (
+				{list.map(({ id, title, description, logo }) => (
 					<Card key={id}>
+						<img className="logoCard" src={logo} alt="project" />
 						<CardHeader title={id < 10 ? `0${id}` : id} />
 						<Divider variant="middle" />
 						<CardContent>

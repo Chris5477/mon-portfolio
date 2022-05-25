@@ -1,5 +1,6 @@
 import { Grid, Typography, Button } from "@mui/material";
 import { projects } from "../utils/listProject";
+import CloseIcon from "@mui/icons-material/Close";
 
 const Project = ({ index, setModal }) => {
 	const { title, description, logo, illustrations, skillWorked, github } = projects[index];
@@ -7,15 +8,15 @@ const Project = ({ index, setModal }) => {
 	const regex = new RegExp(/[.webm]$/);
 
 	return (
-		<Grid container pl={3} pr={3}>
+		<Grid container pl={3} pr={3} sx={{ backgroundColor: "#FFF" }}>
 			<Button
-				variant="contained"
-				sx={{ position: "absolute", top: "2%", right: "4%", borderRadius : "100px" }}
+				variant="text"
+				sx={{ position: "absolute", top: "2%", right: "4%", borderRadius: "100px" }}
 				onClick={() => setModal(false)}
 			>
-				X
+				<CloseIcon fontSize="large" />
 			</Button>
-			<Grid item xs={12} mt={2} mb={1}>
+			<Grid item xs={12} pt={2} pb={1}>
 				<h1>
 					<img className="logo-project slideY-one" src={logo} alt={title} />
 				</h1>
