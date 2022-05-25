@@ -1,4 +1,4 @@
-import { Stack, IconButton, BottomNavigation, BottomNavigationAction } from "@mui/material";
+import {BottomNavigation, BottomNavigationAction } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import WebIcon from "@mui/icons-material/Web";
 import InfoIcon from "@mui/icons-material/Info";

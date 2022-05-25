@@ -35,7 +35,8 @@ function App() {
 				<TopBar handleClick={setIndexPage} open={open} setOpen={setOpen}/>
 				<BrowserRouter>
 				<Routes>
-					<Route exact path="/" element={pages[indexPage]} />
+					{/* <Route exact path="/" element={<Home />} /> */}
+					<Route exact path="/mon-portfolio/" element={pages[indexPage]} />
 				</Routes>
 				</BrowserRouter>
 				
