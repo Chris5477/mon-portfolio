@@ -6,7 +6,7 @@ import Menu from "./Menu";
 const TopBar = ({open, setOpen}) => {
 	
 
-	const classMenu = open && <Menu classComponent={"aaa"} setterModal={setOpen} />;
+	const classMenu = open && <Menu classComponent={"modalMenu"} setterModal={setOpen} />;
 
 	return (
 		<AppBar position="static">

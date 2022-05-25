@@ -98,7 +98,7 @@ ul {
 	transform: translateX(-50%);
 }
 
-.aaa {
+.modalMenu {
 	background-color: #004ba0;
 	height: 100%;
 	position: fixed;
@@ -107,11 +107,11 @@ ul {
 	right: 0;
 	opacity: 0;
 	z-index: 1000;
-	animation: a 0.2s linear forwards;
+	animation: curtain 0.2s linear forwards;
 	padding-top: 20px;
 }
 
-@keyframes a {
+@keyframes curtain {
 	80% {
 		width: 100%;
 	}

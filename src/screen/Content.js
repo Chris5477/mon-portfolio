@@ -72,7 +72,7 @@ const Content = ({ title, texte, list }) => {
 			>
 				{list.map(({ id, title, description, logo }) => (
 					<Card key={id}>
-						<img className="logoCard" src={logo} alt="project" />
+						{logo && <img className="logoCard" src={logo} alt="project" />}
 						<CardHeader title={id < 10 ? `0${id}` : id} />
 						<Divider variant="middle" />
 						<CardContent>
