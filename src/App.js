@@ -11,6 +11,7 @@ import { createImg } from "./utils/animationLogo";
 import react1 from "./assets/icon/react1.svg";
 import react2 from "./assets/icon/react2.svg";
 import react3 from "./assets/icon/react3.svg";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
 	const pathImg = [react1, react2, react3];
@@ -32,7 +33,12 @@ function App() {
 		<div className="App">
 			<ThemeProvider theme={theme("primary")}>
 				<TopBar handleClick={setIndexPage} open={open} setOpen={setOpen}/>
-				{pages[indexPage]}
+				<BrowserRouter>
+				<Routes>
+					<Route exact path="/" element={pages[indexPage]} />
+				</Routes>
+				</BrowserRouter>
+				
 				<Footer handleClick={setIndexPage} setOpen={setOpen}  />
 			</ThemeProvider>
 		</div>
