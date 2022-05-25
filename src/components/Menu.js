@@ -19,10 +19,10 @@ const Menu = ({ classComponent, setterModal }) => {
 				</Grid>
 
 				<Grid item xs={12}>
-					<Typography variant="h4" mb={2}>
+					<Typography variant="h3" mb={2}>
 						Réseaux sociaux
 					</Typography>
-					<Stack justifyContent={"space-around"} alignItems="center" width={"80%"}>
+					<Stack justifyContent={"space-around"} alignItems="center" width={"50%"}>
 						{listLinks.map(({ id, icon, title, url}) => (
 							<Button color="secondary" fullWidth key={id} href={url} sx={{ margin: "10px 0" }}>
 								<Stack direction="row" justifyContent="flex-start" alignItems="center" spacing={2} width="100%">
@@ -34,7 +34,7 @@ const Menu = ({ classComponent, setterModal }) => {
 					</Stack>
 				</Grid>
 				<Grid item xs={12}>
-					<Typography variant="h4" mb={2}>
+					<Typography variant="h3" mb={2}>
 						Me contacter
 					</Typography>
 					<Typography paragraph>Par téléphone :</Typography>
@@ -48,11 +48,11 @@ const Menu = ({ classComponent, setterModal }) => {
 						</Stack>
 					</Button>
 
-					<Typography paragraph>Par e-mail </Typography>
+					<Typography mt={2} paragraph>Par e-mail </Typography>
 					<Button color="secondary" href="mailto:petitcolaschristopher@gmail.com">
 						<Stack direction="row" justifyContent="flex-start" alignItems="center" spacing={2} width="100%">
 							<EmailIcon />
-							<Typography paragraph ml={2}>
+							<Typography paragraph ml={2}  mb={2}>
 								Email
 							</Typography>
 						</Stack>
@@ -60,7 +60,7 @@ const Menu = ({ classComponent, setterModal }) => {
 				</Grid>
 
 				<Grid item xs={12}>
-					<Typography variant="h4" mb={2}>
+					<Typography variant="h3" mb={2}>
 						Télécharger mon CV
 					</Typography>
 

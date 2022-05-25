@@ -1,5 +1,5 @@
 import { createTheme } from "@mui/material/styles";
-import { color, fontWeight } from "@mui/system";
+
 
 export const theme = (colorPalette) =>
 	createTheme({
@@ -95,7 +95,6 @@ export const theme = (colorPalette) =>
 			},
 			h3 : {
 				fontSize : window.innerWidth / 100 + 20 + "px",
-				color : "#1976d2"
 			},
 			body1 : {
 				fontSize : 18 + "px"

@@ -17,12 +17,12 @@ const Information = ({ index, setModal }) => {
 				X
 			</Button>
 			<Grid item xs={12} className="slideY-one" mt={8} mb={5} sx={{ opacity: 0 }}>
-				<Typography  color="primary" variant="h1" >
+				<Typography  color="primary" variant="h1"  >
 					{title}
 				</Typography>
 			</Grid>
 			<Grid item xs={12} className="slideY-two" sx={{ opacity: 0 }} mb={7}>
-				<Typography className="description" paragraph>
+				<Typography className="description" paragraph maxWidth={800}>
 					{description}
 				</Typography>
 			</Grid>
