@@ -6,7 +6,7 @@ import Menu from "./Menu";
 const TopBar = ({open, setOpen}) => {
 	
 
-	const classMenu = open ? "openModal" : "closeModal";
+	const classMenu = open && <Menu classComponent={"aaa"} setterModal={setOpen} />;
 
 	return (
 		<AppBar position="static">
@@ -14,7 +14,7 @@ const TopBar = ({open, setOpen}) => {
 			<IconButton onClick={() => setOpen(true)}>
 				<MenuIcon />
 			</IconButton>
-			<Menu classComponent={classMenu} setterModal={setOpen} />
+			{classMenu}
 		</AppBar>
 	);
 };

@@ -16,9 +16,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
 	const pathImg = [react1, react2, react3];
 
-	// useEffect(() => {
-	// 	setInterval(() => createImg(pathImg), 3000);
-	// });
+	useEffect(() => {
+		setInterval(() => createImg(pathImg), 3000);
+	});
 
 	const pages = [
 		<Home />,
