@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/mon-portfolio/static/css/main.1774b363.css",
-    "main.js": "/mon-portfolio/static/js/main.ce443072.js",
+    "main.css": "/mon-portfolio/static/css/main.88e9a01e.css",
+    "main.js": "/mon-portfolio/static/js/main.2ffed22c.js",
     "static/js/787.75bb2f79.chunk.js": "/mon-portfolio/static/js/787.75bb2f79.chunk.js",
     "static/media/learnAtHome3.png": "/mon-portfolio/static/media/learnAtHome3.d17dbf01af76ce11f23c.png",
     "static/media/animation.webm": "/mon-portfolio/static/media/animation.20f378ebdacf16a480ec.webm",
@@ -47,26 +47,28 @@
     "static/media/billed4.png": "/mon-portfolio/static/media/billed4.3baf93d2856615b4c442.png",
     "static/media/logoCLG.png": "/mon-portfolio/static/media/logoCLG.c33c901d7186b12596bf.png",
     "static/media/coverLetter2.png": "/mon-portfolio/static/media/coverLetter2.dad90bd0c6317deaaea5.png",
+    "static/media/xp.png": "/mon-portfolio/static/media/xp.bf81325bca06926129b2.png",
     "static/media/billed2.png": "/mon-portfolio/static/media/billed2.f6189e2c3d6514d13105.png",
     "static/media/gameOn2.png": "/mon-portfolio/static/media/gameOn2.9ef921245976bde0517e.png",
     "static/media/plats3.png": "/mon-portfolio/static/media/plats3.e8c639612e77ab727c42.png",
     "static/media/Reservia.svg": "/mon-portfolio/static/media/Reservia.93f89146206adfcae2e3e390ab25c68d.svg",
     "static/media/argentBank2.png": "/mon-portfolio/static/media/argentBank2.f60ca3e9de76d1508c7d.png",
-    "static/media/sportSee.png": "/mon-portfolio/static/media/sportSee.33c2de6b80ee7ece1a19.png",
     "static/media/billed3.png": "/mon-portfolio/static/media/billed3.678ac88a2f1f440836ca.png",
     "static/media/logoKasa.png": "/mon-portfolio/static/media/logoKasa.2248af5a8c4bddbaedec.png",
+    "static/media/skills.png": "/mon-portfolio/static/media/skills.b2df5a65e501ec3f74c1.png",
+    "static/media/hobbies.png": "/mon-portfolio/static/media/hobbies.2722a238db8cf8e0ef42.png",
     "static/media/logoOhmyfood.png": "/mon-portfolio/static/media/logoOhmyfood.4163471a01996b4ffc83.png",
     "static/media/logolearnAtHome.png": "/mon-portfolio/static/media/logolearnAtHome.a29ae636d86438a89efa.png",
     "static/media/react2.svg": "/mon-portfolio/static/media/react2.da64ea1d8cba4e982d9f32370ef9cbc5.svg",
     "static/media/react3.svg": "/mon-portfolio/static/media/react3.e0569ce390b6fe134b16bcd1e17d561b.svg",
     "static/media/react1.svg": "/mon-portfolio/static/media/react1.f79c5a0aa16d18637d1d420c2b4aac6c.svg",
     "index.html": "/mon-portfolio/index.html",
-    "main.1774b363.css.map": "/mon-portfolio/static/css/main.1774b363.css.map",
-    "main.ce443072.js.map": "/mon-portfolio/static/js/main.ce443072.js.map",
+    "main.88e9a01e.css.map": "/mon-portfolio/static/css/main.88e9a01e.css.map",
+    "main.2ffed22c.js.map": "/mon-portfolio/static/js/main.2ffed22c.js.map",
     "787.75bb2f79.chunk.js.map": "/mon-portfolio/static/js/787.75bb2f79.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1774b363.css",
-    "static/js/main.ce443072.js"
+    "static/css/main.88e9a01e.css",
+    "static/js/main.2ffed22c.js"
   ]
 }
