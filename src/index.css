@@ -73,7 +73,7 @@ ul {
 
 @keyframes parade {
 	0% {
-		transform: translate(-700px, 600px);
+		transform: scale(0)
 	}
 
 	30% {
@@ -81,11 +81,12 @@ ul {
 	}
 
 	90% {
-		opacity: 0.7;
+		transform: scale(1.2) rotateZ(3600deg);
+		opacity: 0.9;
 	}
 
 	100% {
-		transform: translate(0px, 0px) rotateZ(3600deg);
+		transform: scale(1) rotateZ(3600deg);
 		opacity: 0;
 	}
 }

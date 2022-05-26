@@ -16,9 +16,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
 	const pathImg = [react1, react2, react3];
 
-	// useEffect(() => {
-	// 	setInterval(() => createImg(pathImg), 3000);
-	// });
+	useEffect(() => {
+		setInterval(() => createImg(pathImg), 3000);
+	});
 
 	const pages = [
 		<Home />,
@@ -26,21 +26,20 @@ function App() {
 		<Content title="Qui je suis ?" texte="résentation" list={presentation} />,
 	];
 
-	const [indexPage, setIndexPage] = useState(0)
+	const [indexPage, setIndexPage] = useState(0);
 	const [open, setOpen] = useState(false);
 
 	return (
 		<div className="App">
 			<ThemeProvider theme={theme("primary")}>
-				<TopBar handleClick={setIndexPage} open={open} setOpen={setOpen}/>
+				<TopBar handleClick={setIndexPage} open={open} setOpen={setOpen} />
 				<BrowserRouter>
-				<Routes>
-					
-					<Route exact path="/mon-portfolio/" element={pages[indexPage]} />
-				</Routes>
+					<Routes>
+						<Route exact path="/mon-portfolio/" element={pages[indexPage]} />
+					</Routes>
 				</BrowserRouter>
-				
-				<Footer handleClick={setIndexPage} setOpen={setOpen}  />
+
+				<Footer handleClick={setIndexPage} setOpen={setOpen} />
 			</ThemeProvider>
 		</div>
 	);

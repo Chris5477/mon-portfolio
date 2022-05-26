@@ -8,7 +8,7 @@ export const createImg = (array) => {
     img.setAttribute("src", array[setPos(3)]);
     img.setAttribute("alt", "react");
     const posX = `${setPos(100)}%`;
-    const posY = `${setPos(100)}%`;
+    const posY = `${setPos(80)}%`;
     img.style.top = posX;
     img.style.left = posY;
     setTimeout(() => img.remove(), 15000);
