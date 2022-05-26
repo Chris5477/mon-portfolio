@@ -11,16 +11,14 @@ import {
 	Divider,
 } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Project from "../components/Project";
 import Information from "../components/Information";
 
 const Content = ({ title, texte, list }) => {
 	const [index, setIndex] = useState(0);
 	const [modal, setModal] = useState(false);
-
 	const classBox = modal ? "openProject" : "closeProject";
-
 	const isDescription = title === "Mes projets" ? true : false;
 	let component;
 
@@ -36,6 +34,45 @@ const Content = ({ title, texte, list }) => {
 		setModal(true);
 		setIndex(id - 1);
 	};
+
+	let startX = 0;
+	let container = "";
+	let dist = 0;
+	const test = (e) => {
+		container = document.querySelector(".slideY-three");
+		startX = e.targetTouches[0].clientX;
+	};
+
+	const teste = (e) => {
+		if (e.targetTouches[0].clientX < startX) {
+			if (dist <= 3100) {
+				dist += (startX - e.targetTouches[0].clientX) * 0.02;
+				console.log(dist);
+				container.style.right = dist + "px";
+				console.log("ok");
+			} else {
+				dist += (startX - e.targetTouches[0].clientX) * 0.02;
+				container.style.right = "3050px";
+			}
+		}
+		if (e.targetTouches[0].clientX > startX) {
+			if (dist >= 0) {
+				dist += (startX - e.targetTouches[0].clientX) * 0.02;
+				console.log(dist);
+				container.style.left = -dist + "px";
+			} else {
+				return 0;
+			}
+		}
+		// } else if (e.targetTouches[0].clientX > startX) {
+		// 	let diste = e.targetTouches[0].clientX - startX;
+		// 	container.style.left += diste + "px";
+		// 	console.log(e.targetTouches[0].clientX - startX);
+		// }
+	};
+
+	useEffect(() => document.querySelector(".slideY-three").addEventListener("touchstart", (e) => test(e)));
+	useEffect(() => document.querySelector(".slideY-three").addEventListener("touchmove", (e) => teste(e)));
 
 	return (
 		<Grid container mt={2} sx={{ overflow: "hidden" }}>
@@ -68,7 +105,7 @@ const Content = ({ title, texte, list }) => {
 				pb={2}
 				spacing={4}
 				className="slideY-three"
-				sx={{ opacity: 0 }}
+				sx={{ opacity: 0, position: "relative" }}
 			>
 				{list.map(({ id, title, description, logo }) => (
 					<Card key={id}>
