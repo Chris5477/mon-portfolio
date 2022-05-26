@@ -3,8 +3,8 @@ import me from "../assets/pictures/chrispng.png";
 
 const Home = () => {
 	return (
-		<Grid container width="100%" pl={3} pr={2}>
-			<Grid item xs={12} md={6}>
+		<Grid container width="100%" pl={window.innerWidth > 600 ? 20 : 3} pr={2}>
+			<Grid item xs={12} >
 				<img className="profil" src={me} alt="profil" />
 			</Grid>
 			<Grid item xs={12} mt={10} mb={10}>

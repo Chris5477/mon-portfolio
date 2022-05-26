@@ -74,18 +74,18 @@ const Content = ({ title, texte, list }) => {
 	return (
 		<Grid container mt={2} sx={{ overflow: "hidden" }}>
 			<Grid item xs={12} className="slideY-one" sx={{ opacity: 0 }}>
-				<Typography variant="h1" fontSize={"50px"} pl={3} mb={5}>
+				<Typography variant="h1" fontSize={"50px"} pl={3} mb={2}>
 					{title}
 				</Typography>
 			</Grid>
 			<Grid item xs={12} className="slideY-two" sx={{ opacity: 0 }}>
 				<Stack direction="row">
 					{isDescription ? (
-						<Typography color="primary" variant="h2" fontSize={"50px"} fontWeight={600} pl={3} pr={1} mb={5}>
+						<Typography color="primary" variant="h2" fontSize={"50px"} fontWeight={600} pl={3} pr={1} mb={3}>
 							{list.length}
 						</Typography>
 					) : (
-						<Typography color="primary" variant="h2" fontSize={"50px"} fontWeight={400} pl={3} mb={5}>
+						<Typography color="primary" variant="h2" fontSize={"50px"} fontWeight={400} pl={3} mb={3}>
 							P
 						</Typography>
 					)}

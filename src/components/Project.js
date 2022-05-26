@@ -16,13 +16,13 @@ const Project = ({ index, setModal }) => {
 			>
 				<CloseIcon fontSize="large" />
 			</Button>
-			<Grid item xs={12} pt={2} pb={1}>
+			<Grid item xs={12} pb={1}>
 				<h1>
 					<img className="logo-project slideY-one" src={logo} alt={title} />
 				</h1>
 			</Grid>
 			<Grid item xs={12} className="slideY-two" sx={{ opacity: "0" }} mb={2}>
-				<Typography variant="h2" fontWeight={400} mb={3}>
+				<Typography color="primary"variant="h2" fontWeight={400} mb={3}>
 					{description}
 				</Typography>
 
@@ -36,7 +36,7 @@ const Project = ({ index, setModal }) => {
 				<Button href={github}>Voir sur Github</Button>
 
 				{illustrations.map((media, index) => (
-					<Grid item xs={12} className="slideY-three" sx={{ opacity: 0 }} mt={3} pb={7} key={index}>
+					<Grid item xs={12} className="slideY-three" sx={{ opacity: 0}} mt={3} pb={3} key={index}>
 						{media.match(regex) ? (
 							<video className="illustration" controls>
 								<source src={media} />

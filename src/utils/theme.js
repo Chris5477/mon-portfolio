@@ -46,7 +46,7 @@ export const theme = (colorPalette) =>
 						backgroundColor: "#FFF",
 						boxShadow: "2px 2px 15px rgba(0, 0, 0, 0.515)",
 						width: 250,
-						height: 400,
+						height: 380,
 						borderRadius: "20px",
 						position: "relative",
 					},

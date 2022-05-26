@@ -5,7 +5,7 @@ import CloseIcon from "@mui/icons-material/Close";
 
 
 const Information = ({ index, setModal }) => {
-	const { title, description } = presentation[index];
+	const { title, description, picture } = presentation[index];
 	useEffect(() => {
 		document.querySelector(".description").innerHTML = description.replaceAll("*", "<br/><br/>");
 	});
@@ -18,16 +18,21 @@ const Information = ({ index, setModal }) => {
 			>
 				<CloseIcon fontSize="large" />
 			</Button>
-			<Grid item xs={12} className="slideY-one" mt={2} mb={1} sx={{ opacity: 0 }}>
-				<Typography color="primary" variant="h1">
+			<Grid item xs={12}  className="slideY-one" mt={2} mb={1} sx={{ opacity: 0 }}>
+				<Typography color="primary" className="title" variant="h1">
 					{title}
 				</Typography>
 			</Grid>
-			<Grid item xs={12} className="slideY-two" sx={{ opacity: 0 }} mb={7}>
+			<Grid item xs={12} md={7} className="slideY-two" sx={{ opacity: 0 }} mb={7}>
 				<Typography className="description" paragraph maxWidth={800}>
 					{description}
 				</Typography>
 			</Grid>
+			{window.innerWidth > 600 && (
+				<Grid item md={5} width={100}>
+					<img className="picture-about slideY-three"  src={picture} alt="illustration"/>
+				</Grid>
+			)}
 		</Grid>
 	);
 };
