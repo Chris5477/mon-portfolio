@@ -84,7 +84,7 @@ export const theme = (colorPalette) =>
 		},
 		typography: {
 			h1: {
-				fontSize: window.innerWidth / 100 + 50 + "px",
+				fontSize: window.innerWidth / 100 + 45 + "px",
 				color: "#1976d2",
 				fontWeight: 400,
 			},

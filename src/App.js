@@ -26,7 +26,7 @@ function App() {
 		<Content title="Qui je suis ?" texte="résentation" list={presentation} />,
 	];
 
-	const [indexPage, setIndexPage] = useState(1);
+	const [indexPage, setIndexPage] = useState(0)
 	const [open, setOpen] = useState(false);
 
 	return (

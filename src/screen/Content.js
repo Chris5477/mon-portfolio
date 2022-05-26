@@ -38,41 +38,38 @@ const Content = ({ title, texte, list }) => {
 	let startX = 0;
 	let container = "";
 	let dist = 0;
-	const test = (e) => {
+
+	const startTouch = (e) => {
 		container = document.querySelector(".slideY-three");
 		startX = e.targetTouches[0].clientX;
 	};
 
-	const teste = (e) => {
-		if (e.targetTouches[0].clientX < startX) {
-			if (dist <= 3100) {
-				dist += (startX - e.targetTouches[0].clientX) * 0.02;
-				console.log(dist);
+	const moveTouch = (e) => {
+		let leftDirection = e.targetTouches[0].clientX < startX && "left";
+		let rightDirection = e.targetTouches[0].clientX > startX && "right";
+		let between = startX - e.targetTouches[0].clientX;
+
+		if (leftDirection) {
+			if (dist <= 3050) {
+				dist += between * 0.08;
 				container.style.right = dist + "px";
-				console.log("ok");
 			} else {
-				dist += (startX - e.targetTouches[0].clientX) * 0.02;
-				container.style.right = "3050px";
+				return 1;
 			}
 		}
-		if (e.targetTouches[0].clientX > startX) {
+		else if (rightDirection) {
 			if (dist >= 0) {
-				dist += (startX - e.targetTouches[0].clientX) * 0.02;
-				console.log(dist);
+				dist += between * 0.08;
 				container.style.left = -dist + "px";
 			} else {
-				return 0;
+				return 1;
 			}
 		}
-		// } else if (e.targetTouches[0].clientX > startX) {
-		// 	let diste = e.targetTouches[0].clientX - startX;
-		// 	container.style.left += diste + "px";
-		// 	console.log(e.targetTouches[0].clientX - startX);
-		// }
+		
 	};
 
-	useEffect(() => document.querySelector(".slideY-three").addEventListener("touchstart", (e) => test(e)));
-	useEffect(() => document.querySelector(".slideY-three").addEventListener("touchmove", (e) => teste(e)));
+	useEffect(() => document.querySelector(".slideY-three").addEventListener("touchstart", (e) => startTouch(e)));
+	useEffect(() => document.querySelector(".slideY-three").addEventListener("touchmove", (e) => moveTouch(e)));
 
 	return (
 		<Grid container mt={2} sx={{ overflow: "hidden" }}>
