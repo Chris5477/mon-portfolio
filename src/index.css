@@ -141,7 +141,7 @@ ul {
 	width: 100%;
 	height: 100%;
 	transform: scale(0);
-	transition: 0.6s;
+	transition: 0.2s;
 	opacity: 0;
 }
 
@@ -181,7 +181,7 @@ ul {
 		padding: 25px 30px;
 	}
 
-	.profil{
+	.profil {
 		transform: translate(0%, 10%);
 	}
 }

@@ -44,7 +44,6 @@ import kasa2 from "../assets/projects/kasa/kasa2.png";
 import kasa3 from "../assets/projects/kasa/kasa3.png";
 
 import logoSportsee from "../assets/projects/sportSee/logoSportsee.png";
-import sportSee from "../assets/projects/sportSee/sportSee.png";
 import sportSee2 from "../assets/projects/sportSee/sportSee2.png";
 import sportSee3 from "../assets/projects/sportSee/sportSee3.png";
 
@@ -173,7 +172,7 @@ export const projects = [
 		title: "Sportsee",
 		description: "Développez un tableau de bord d'analytics avec React",
 		logo: logoSportsee,
-		illustrations: [sportSee, sportSee2, sportSee3],
+		illustrations: [sportSee2, sportSee3],
 		skillWorked: [
 			"Assurer la qualité des données d'une application",
 			"Développer des éléments graphiques avancés à l'aide de bibliothèques JavaScript",
