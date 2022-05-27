@@ -51,15 +51,17 @@ const Content = ({ title, texte, list }) => {
 
 		if (leftDirection) {
 			if (dist <= 3050) {
-				dist += between * 0.08;
-				container.style.right = dist + "px";
+				dist += between / 10;
+				container.style.left = -dist + "px";
+				console.log(dist);
 			} else {
 				return 1;
 			}
 		} else if (rightDirection) {
-			if (dist >= 0) {
-				dist += between * 0.08;
-				container.style.left = -dist + "px";
+			if (dist >= -100) {
+				dist += between / 10;
+				container.style.left = between - dist + "px";
+				console.log(dist);
 			} else {
 				return 1;
 			}
