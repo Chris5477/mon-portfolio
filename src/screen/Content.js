@@ -50,23 +50,26 @@ const Content = ({ title, texte, list }) => {
 		let between = startX - e.targetTouches[0].clientX;
 
 		if (leftDirection) {
-			if (dist <= 3050) {
-				dist += between / 10;
-				container.style.left = -dist + "px";
+			if (dist <= container.clientWidth   ) {
+				dist += between * 0.06;
+				container.style.left = -dist + between + "px";
 				console.log(dist);
 			} else {
-				return 1;
+				return 0;
 			}
 		} else if (rightDirection) {
-			if (dist >= -100) {
-				dist += between / 10;
-				container.style.left = between - dist + "px";
+			if (dist >= 0) {
+				dist += between * 0.06;
+				container.style.left = - dist - between + "px";
 				console.log(dist);
 			} else {
-				return 1;
+				return 0;
 			}
 		}
 	};
+
+
+	
 
 	useEffect(() => document.querySelector(".slideY-three").addEventListener("touchstart", (e) => startTouch(e)));
 	useEffect(() => document.querySelector(".slideY-three").addEventListener("touchmove", (e) => moveTouch(e)));

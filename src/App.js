@@ -16,9 +16,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
 	const pathImg = [react1, react2, react3];
 
-	// useEffect(() => {
-	// 	setInterval(() => createImg(pathImg), 5000);
-	// });
+	useEffect(() => {
+		setInterval(() => createImg(pathImg), 4000);
+	});
 
 	const pages = [
 		<Home />,
@@ -30,7 +30,7 @@ function App() {
 	const [open, setOpen] = useState(false);
 
 	return (
-		<div className="App">
+		<div className="App" style={{height : window.innerHeight}}>
 			<ThemeProvider theme={theme("primary")}>
 				<TopBar handleClick={setIndexPage} open={open} setOpen={setOpen} />
 				<BrowserRouter>
