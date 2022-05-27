@@ -1,4 +1,3 @@
-import { WindowOutlined } from "@mui/icons-material";
 import { Grid, Typography } from "@mui/material";
 import me from "../assets/pictures/chrispng.png";
 import RadarChartComponent from "../components/RadarChart";

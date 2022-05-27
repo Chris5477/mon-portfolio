@@ -11,5 +11,5 @@ export const createImg = (array) => {
     const posY = `${setPos(80)}%`;
     img.style.top = posX;
     img.style.left = posY;
-    setTimeout(() => img.remove(), 15000);
+    setTimeout(() => img.remove(), 7000);
 };

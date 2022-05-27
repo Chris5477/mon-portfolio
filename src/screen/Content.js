@@ -56,8 +56,7 @@ const Content = ({ title, texte, list }) => {
 			} else {
 				return 1;
 			}
-		}
-		else if (rightDirection) {
+		} else if (rightDirection) {
 			if (dist >= 0) {
 				dist += between * 0.08;
 				container.style.left = -dist + "px";
@@ -65,7 +64,6 @@ const Content = ({ title, texte, list }) => {
 				return 1;
 			}
 		}
-		
 	};
 
 	useEffect(() => document.querySelector(".slideY-three").addEventListener("touchstart", (e) => startTouch(e)));
