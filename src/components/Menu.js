@@ -9,7 +9,12 @@ const Menu = ({ classComponent, setterModal }) => {
 	return (
 		<Box className={classComponent}>
 			<Grid container spacing={1} pl={5}>
-				<Button color="secondary" variant="text" sx={{ position: "absolute", top: "2%", right: "2%" }} onClick={() => setterModal(false)}>
+				<Button
+					color="secondary"
+					variant="text"
+					sx={{ position: "absolute", top: "2%", right: "2%" }}
+					onClick={() => setterModal(false)}
+				>
 					<CloseIcon fontSize="large" />
 				</Button>
 
@@ -22,7 +27,7 @@ const Menu = ({ classComponent, setterModal }) => {
 						Réseaux sociaux
 					</Typography>
 					<Stack justifyContent={"space-around"} alignItems="center" width={"60%"}>
-						{listLinks.map(({ id, icon, title, url}) => (
+						{listLinks.map(({ id, icon, title, url }) => (
 							<Button color="secondary" fullWidth key={id} href={url} sx={{ margin: "10px 0" }}>
 								<Stack direction="row" justifyContent="flex-start" alignItems="center" spacing={2} width="100%">
 									{icon}
@@ -47,11 +52,13 @@ const Menu = ({ classComponent, setterModal }) => {
 						</Stack>
 					</Button>
 
-					<Typography mt={2} paragraph>Par e-mail </Typography>
+					<Typography mt={2} paragraph>
+						Par e-mail{" "}
+					</Typography>
 					<Button color="secondary" href="mailto:petitcolaschristopher@gmail.com">
 						<Stack direction="row" justifyContent="flex-start" alignItems="center" spacing={2} width="100%">
 							<EmailIcon />
-							<Typography paragraph ml={2}  mb={2}>
+							<Typography paragraph ml={2} mb={2}>
 								Email
 							</Typography>
 						</Stack>
@@ -59,11 +66,13 @@ const Menu = ({ classComponent, setterModal }) => {
 				</Grid>
 
 				<Grid item xs={12}>
-					<Typography variant="h3" mt={2}  mb={2}>
+					<Typography variant="h3" mt={2} mb={2}>
 						Télécharger mon CV
 					</Typography>
 
-					<Button color="secondary" onClick={saveFile}>Télécharger</Button>
+					<Button color="secondary" onClick={saveFile}>
+						Télécharger
+					</Button>
 				</Grid>
 
 				<Typography

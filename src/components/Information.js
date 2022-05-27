@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import { presentation } from "../utils/presentation";
 import CloseIcon from "@mui/icons-material/Close";
 
-
 const Information = ({ index, setModal }) => {
 	const { title, description, picture } = presentation[index];
 	useEffect(() => {
@@ -18,7 +17,7 @@ const Information = ({ index, setModal }) => {
 			>
 				<CloseIcon fontSize="large" />
 			</Button>
-			<Grid item xs={12}  className="slideY-one" mt={2} mb={1} sx={{ opacity: 0 }}>
+			<Grid item xs={12} className="slideY-one" mt={2} mb={1} sx={{ opacity: 0 }}>
 				<Typography color="primary" className="title" variant="h1">
 					{title}
 				</Typography>
@@ -30,7 +29,7 @@ const Information = ({ index, setModal }) => {
 			</Grid>
 			{window.innerWidth > 600 && (
 				<Grid item md={5} width={100}>
-					<img className="picture-about slideY-three"  src={picture} alt="illustration"/>
+					<img className="picture-about slideY-three" src={picture} alt="illustration" />
 				</Grid>
 			)}
 		</Grid>

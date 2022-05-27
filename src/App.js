@@ -15,22 +15,34 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
 	const pathImg = [react1, react2, react3];
-
-	useEffect(() => {
-		setInterval(() => createImg(pathImg), 4000);
-	});
-
-	const pages = [
-		<Home />,
-		<Content title="Mes projets" texte={"projets réalisés"} list={projects} />,
-		<Content title="Qui je suis ?" texte="résentation" list={presentation} />,
-	];
-
+	const [positionCard, setPositionCard] = useState(0);
 	const [indexPage, setIndexPage] = useState(0);
 	const [open, setOpen] = useState(false);
 
+	useEffect(() => {
+		setInterval(() => createImg(pathImg), 4000);
+	}, []);
+
+	const pages = [
+		<Home />,
+		<Content
+			title="Mes projets"
+			texte={"projets réalisés"}
+			posCard={positionCard}
+			setPosCard={setPositionCard}
+			list={projects}
+		/>,
+		<Content
+			title="Qui je suis ?"
+			texte="résentation"
+			posCard={positionCard}
+			setPosCard={setPositionCard}
+			list={presentation}
+		/>,
+	];
+
 	return (
-		<div className="App" style={{height : window.innerHeight}}>
+		<div className="App" style={{ height: window.innerHeight }}>
 			<ThemeProvider theme={theme("primary")}>
 				<TopBar handleClick={setIndexPage} open={open} setOpen={setOpen} />
 				<BrowserRouter>
@@ -39,7 +51,7 @@ function App() {
 					</Routes>
 				</BrowserRouter>
 
-				<Footer handleClick={setIndexPage} setOpen={setOpen} />
+				<Footer handleClick={setIndexPage} setOpen={setOpen} setPosCard={setPositionCard} />
 			</ThemeProvider>
 		</div>
 	);

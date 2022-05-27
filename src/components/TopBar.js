@@ -3,9 +3,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import react from "../assets/icon/react2.svg";
 import Menu from "./Menu";
 
-const TopBar = ({open, setOpen}) => {
-	
-
+const TopBar = ({ open, setOpen }) => {
 	const classMenu = open && <Menu classComponent={"modalMenu"} setterModal={setOpen} />;
 
 	return (

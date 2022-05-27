@@ -185,7 +185,7 @@ export const projects = [
 		id: 10,
 		title: "ArgentBank",
 		description: "Utilisez une API pour un compte utilisateur bancaire avec React",
-		logo :logoArgentBank,
+		logo: logoArgentBank,
 		illustrations: [argentBank, argentBank2, argentBank3, argentBank4],
 		skillWorked: [
 			"Implémenter un gestionnaire d'état dans une application React",
@@ -199,7 +199,7 @@ export const projects = [
 		id: 11,
 		title: "HRnet",
 		description: "Faites passer une librairie jQuery vers React",
-		logo :logoCompany,
+		logo: logoCompany,
 		illustrations: [hrnet, hrnet4, hrnet2, hrnet3],
 		skillWorked: [
 			"Refondre une application pour réduire la dette technique",
@@ -213,7 +213,7 @@ export const projects = [
 		id: 12,
 		title: "Cover letter generator",
 		description: "Créer des lettres de motivation adaptées rapidement",
-		logo :logoCLG,
+		logo: logoCLG,
 		illustrations: [
 			coverLetter1,
 			coverLetter2,

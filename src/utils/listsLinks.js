@@ -2,7 +2,6 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LanguageIcon from "@mui/icons-material/Language";
 
-
 export const listLinks = [
 	{
 		id: 1,
@@ -22,5 +21,4 @@ export const listLinks = [
 		title: "WeLovesDevs",
 		url: "https://christopherpetitcola.welovedevs.com",
 	},
-
 ];

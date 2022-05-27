@@ -4,7 +4,7 @@ import WebIcon from "@mui/icons-material/Web";
 import InfoIcon from "@mui/icons-material/Info";
 import { useState } from "react";
 
-const Footer = ({ handleClick, setOpen }) => {
+const Footer = ({ handleClick, setOpen, setPosCard }) => {
 	const [value, setValue] = useState("home");
 
 	const handleChange = (event, newValue) => {
@@ -14,6 +14,7 @@ const Footer = ({ handleClick, setOpen }) => {
 	const changePage = (page) => {
 		handleClick(page);
 		setOpen(false);
+		setPosCard(0);
 	};
 
 	return (

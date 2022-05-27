@@ -50,10 +50,10 @@ export const theme = (colorPalette) =>
 						borderRadius: "20px",
 						position: "relative",
 						cursor: "pointer",
-						"&:hover span" : {
-							color : "#1976d2",
-							transition : "0.4s"
-						}
+						"&:hover span": {
+							color: "#1976d2",
+							transition: "0.4s",
+						},
 					},
 				},
 			},

@@ -11,16 +11,19 @@ import {
 	Divider,
 } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
-import { useEffect, useState } from "react";
+import { useDebugValue, useEffect, useState } from "react";
 import Project from "../components/Project";
 import Information from "../components/Information";
 
-const Content = ({ title, texte, list }) => {
+const Content = ({ title, texte, list, posCard, setPosCard }) => {
 	const [index, setIndex] = useState(0);
 	const [modal, setModal] = useState(false);
 	const classBox = modal ? "openProject" : "closeProject";
 	const isDescription = title === "Mes projets" ? true : false;
 	let component;
+
+	const [disabledBtnPrev, setDisabledBtnPrev] = useState(true);
+	const [disabledBtnNext, setDisabledBtnNext] = useState(false);
 
 	if (modal) {
 		component = isDescription ? (
@@ -35,44 +38,31 @@ const Content = ({ title, texte, list }) => {
 		setIndex(id - 1);
 	};
 
-	let startX = 0;
-	let container = "";
-	let dist = 0;
+	const sizeContainer = (list.length - 1) * 282;
 
-	const startTouch = (e) => {
-		container = document.querySelector(".slideY-three");
-		startX = e.targetTouches[0].clientX;
+	const previous = () => {
+		setPosCard(posCard - 282);
+		setDisabledBtnNext(false);
+		posCard <= 282 && setDisabledBtnPrev(true);
 	};
 
-	const moveTouch = (e) => {
-		let leftDirection = e.targetTouches[0].clientX < startX && "left";
-		let rightDirection = e.targetTouches[0].clientX > startX && "right";
-		let between = startX - e.targetTouches[0].clientX;
+	const next = (e) => {
+		setPosCard(posCard + 282);
+		setDisabledBtnPrev(false);
+		posCard >= sizeContainer - 282 && setDisabledBtnNext(true);
+	};
 
-		if (leftDirection) {
-			if (dist <= container.clientWidth   ) {
-				dist += between * 0.06;
-				container.style.left = -dist + between + "px";
-				console.log(dist);
-			} else {
-				return 0;
-			}
-		} else if (rightDirection) {
-			if (dist >= 0) {
-				dist += between * 0.06;
-				container.style.left = - dist - between + "px";
-				console.log(dist);
-			} else {
-				return 0;
-			}
+	useEffect(() => {
+		if (posCard == 0) {
+			setDisabledBtnPrev(true);
+			setDisabledBtnNext(false);
 		}
-	};
+	});
 
-
-	
-
-	useEffect(() => document.querySelector(".slideY-three").addEventListener("touchstart", (e) => startTouch(e)));
-	useEffect(() => document.querySelector(".slideY-three").addEventListener("touchmove", (e) => moveTouch(e)));
+	useEffect(() => {
+		document.querySelector(".slideY-three").style.right = posCard + "px";
+		document.querySelector(".slideY-three").style.transition = "0.4s";
+	}, [posCard]);
 
 	return (
 		<Grid container mt={2} sx={{ overflow: "hidden" }}>
@@ -92,17 +82,15 @@ const Content = ({ title, texte, list }) => {
 							P
 						</Typography>
 					)}
-					<Typography variant="h2" pt={2} mb={2}>
+					<Typography variant="h4" fontWeight={200} pt={2} mb={2}>
 						{texte}
 					</Typography>
 				</Stack>
 			</Grid>
 			<Stack
 				direction="row"
-				height="500px"
+				height="400px"
 				pl={3}
-				pt={2}
-				pb={2}
 				spacing={4}
 				className="slideY-three"
 				sx={{ opacity: 0, position: "relative" }}
@@ -126,6 +114,28 @@ const Content = ({ title, texte, list }) => {
 						</CardActions>
 					</Card>
 				))}
+			</Stack>
+			<Stack pl={3} direction="row" spacing={3}>
+				<Button
+					fullWidth
+					size="large"
+					variant="contained"
+					className="btn-previous"
+					disabled={disabledBtnPrev}
+					onClick={previous}
+				>
+					previous
+				</Button>
+				<Button
+					fullWidth
+					size="large"
+					variant="contained"
+					className="btn-next"
+					disabled={disabledBtnNext}
+					onClick={next}
+				>
+					next
+				</Button>
 			</Stack>
 			<Box className={classBox}>{component}</Box>
 		</Grid>

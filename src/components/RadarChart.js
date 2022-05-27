@@ -5,8 +5,22 @@ import { langages } from "../utils/langages";
 
 const RadarChartComponent = () => {
 	return (
-		<Grid height={800} width="100%" item display={"flex"} flexDirection="column" justifyContent="center" alignItems={"flex-start"} md={6}>
-			<Typography sx={{backgroundColor: "#004ba0", color:"#FFF", padding: "7px 12px", marginLeft:"20px"}} variant="h1">Mes compétences</Typography>
+		<Grid
+			height={800}
+			width="100%"
+			item
+			display={"flex"}
+			flexDirection="column"
+			justifyContent="center"
+			alignItems={"flex-start"}
+			md={6}
+		>
+			<Typography
+				sx={{ backgroundColor: "#004ba0", color: "#FFF", padding: "7px 12px", marginLeft: "20px" }}
+				variant="h1"
+			>
+				Mes compétences
+			</Typography>
 			<RadarChart outerRadius={220} width={600} height={600} data={langages}>
 				<PolarGrid stroke="#004ba0" />
 				<PolarAngleAxis stroke="#004ba0" fontSize={25} fontWeight={800} dataKey="subject" />
