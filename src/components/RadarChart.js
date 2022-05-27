@@ -27,6 +27,7 @@ const RadarChartComponent = () => {
 				<Label value={"Mon gros zizi"} position="centerTop" />
 				<PolarRadiusAxis angle={30} domain={[0, 100]} />
 				<Radar name="Langages" dataKey="A" stroke="#63a4ff" fill="#1976d2" fillOpacity={0.8} />
+				<Radar name="Langages" dataKey="B" stroke="#63a4ff" fill="#ellow" fillOpacity={0.8} />
 			</RadarChart>
 		</Grid>
 	);

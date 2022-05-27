@@ -67,7 +67,7 @@ const Content = ({ title, texte, list, posCard, setPosCard }) => {
 	return (
 		<Grid container mt={2} sx={{ overflow: "hidden" }}>
 			<Grid item xs={12} className="slideY-one" sx={{ opacity: 0 }}>
-				<Typography variant="h1" fontSize={"50px"} pl={3} mb={2}>
+				<Typography variant="h1" fontSize={"50px"} pl={3} mb={1}>
 					{title}
 				</Typography>
 			</Grid>
@@ -89,7 +89,7 @@ const Content = ({ title, texte, list, posCard, setPosCard }) => {
 			</Grid>
 			<Stack
 				direction="row"
-				height="400px"
+				height="380px"
 				pl={3}
 				spacing={4}
 				className="slideY-three"
