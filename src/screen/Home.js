@@ -3,7 +3,7 @@ import me from "../assets/pictures/chrispng.png";
 import RadarChartComponent from "../components/RadarChart";
 
 const Home = () => {
-	const radar = window.innerWidth > 600 && <RadarChartComponent />;
+	const radar = window.innerWidth > 900 && <RadarChartComponent />;
 
 	return (
 		<Grid container width="100%" pl={window.innerWidth > 600 ? 10 : 3} pr={2}>

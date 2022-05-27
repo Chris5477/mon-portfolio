@@ -18,6 +18,8 @@ function App() {
 	const [positionCard, setPositionCard] = useState(0);
 	const [indexPage, setIndexPage] = useState(0);
 	const [open, setOpen] = useState(false);
+	const [modal, setModal] = useState(false);
+
 
 	useEffect(() => {
 		setInterval(() => createImg(pathImg), 4000);
@@ -31,6 +33,8 @@ function App() {
 			posCard={positionCard}
 			setPosCard={setPositionCard}
 			list={projects}
+			modal={modal}
+			setModal={setModal}
 		/>,
 		<Content
 			title="Qui je suis ?"
@@ -38,6 +42,8 @@ function App() {
 			posCard={positionCard}
 			setPosCard={setPositionCard}
 			list={presentation}
+			modal={modal}
+			setModal={setModal}
 		/>,
 	];
 
@@ -51,7 +57,7 @@ function App() {
 					</Routes>
 				</BrowserRouter>
 
-				<Footer handleClick={setIndexPage} setOpen={setOpen} setPosCard={setPositionCard} />
+				<Footer handleClick={setIndexPage} setOpen={setOpen} setPosCard={setPositionCard} setModal={setModal} />
 			</ThemeProvider>
 		</div>
 	);

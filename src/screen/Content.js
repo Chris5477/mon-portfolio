@@ -15,9 +15,8 @@ import { useDebugValue, useEffect, useState } from "react";
 import Project from "../components/Project";
 import Information from "../components/Information";
 
-const Content = ({ title, texte, list, posCard, setPosCard }) => {
+const Content = ({ title, texte, list, posCard, setPosCard, modal, setModal}) => {
 	const [index, setIndex] = useState(0);
-	const [modal, setModal] = useState(false);
 	const classBox = modal ? "openProject" : "closeProject";
 	const isDescription = title === "Mes projets" ? true : false;
 	let component;
@@ -115,7 +114,7 @@ const Content = ({ title, texte, list, posCard, setPosCard }) => {
 					</Card>
 				))}
 			</Stack>
-			<Stack pl={3} direction="row" spacing={3}>
+			<Stack pl={3} direction="row" spacing={3} className="slideY-three" sx={{opacity :0}}>
 				<Button
 					fullWidth
 					size="large"

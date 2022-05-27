@@ -27,7 +27,7 @@ const Information = ({ index, setModal }) => {
 					{description}
 				</Typography>
 			</Grid>
-			{window.innerWidth > 600 && (
+			{window.innerWidth > 900 && (
 				<Grid item md={5} width={100}>
 					<img className="picture-about slideY-three" src={picture} alt="illustration" />
 				</Grid>
