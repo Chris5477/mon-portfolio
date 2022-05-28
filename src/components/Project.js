@@ -36,7 +36,7 @@ const Project = ({ index, setModal }) => {
 				<Button href={github}>Voir sur Github</Button>
 
 				{illustrations.map((media, index) => (
-					<Grid item xs={12} className="slideY-three" sx={{ opacity: 0 }} mt={3} pb={3} key={index}>
+					<Grid item xs={12} className="slideY-three container-illustration" mt={3} mb={4} pb={3} pt={3} key={index}>
 						{media.match(regex) ? (
 							<video className="illustration" controls>
 								<source src={media} />
