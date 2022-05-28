@@ -1,9 +1,17 @@
-import { Label, PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart } from "recharts";
+import { Label, Text, PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart } from "recharts";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { langages } from "../utils/langages";
 
 const RadarChartComponent = () => {
+	const renderPolarAngleAxis = ({ payload, x, y, cx, cy, ...rest }) => {
+		return (
+			<Text {...rest} verticalAnchor="middle" y={y + (y - cy) / 18} x={x + (x - cx) / 18}>
+				{payload.value}
+			</Text>
+		);
+	};
+
 	return (
 		<Grid
 			height={800}
@@ -23,8 +31,13 @@ const RadarChartComponent = () => {
 			</Typography>
 			<RadarChart outerRadius={220} width={600} height={600} data={langages}>
 				<PolarGrid stroke="#004ba0" />
-				<PolarAngleAxis stroke="#004ba0" fontSize={25} fontWeight={800} dataKey="subject" />
-				<Label value={"Mon gros zizi"} position="centerTop" />
+				<PolarAngleAxis
+					tick={(props) => renderPolarAngleAxis(props)}
+					stroke="#004ba0"
+					fontSize={25}
+					fontWeight={800}
+					dataKey="subject"
+				/>
 				<PolarRadiusAxis angle={30} domain={[0, 100]} />
 				<Radar name="Langages" dataKey="A" stroke="#63a4ff" fill="#1976d2" fillOpacity={0.8} />
 				<Radar name="Langages" dataKey="B" stroke="#63a4ff" fill="#ellow" fillOpacity={0.8} />

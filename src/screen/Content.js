@@ -114,7 +114,7 @@ const Content = ({ title, texte, list, posCard, setPosCard, modal, setModal}) =>
 					</Card>
 				))}
 			</Stack>
-			<Stack pl={3} direction="row" spacing={3} className="slideY-three" sx={{opacity :0}}>
+			<Stack pl={3} mb={8} direction="row" spacing={3} className="slideY-three" sx={{opacity :0}}>
 				<Button
 					fullWidth
 					size="large"

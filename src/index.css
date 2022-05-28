@@ -19,11 +19,6 @@ ul {
 	padding-left: 20px;
 }
 
-.textHomePage::first-letter {
-	color: #1976d2;
-	font-size: 20px;
-	font-weight: 500;
-}
 
 .profil {
 	width: 50%;
@@ -166,11 +161,6 @@ ul {
 	transform: translate(-50%, -50%);
 }
 
-.description::first-letter {
-	color: #1976d2;
-	font-size: 40px;
-	font-weight: 700;
-}
 
 .picture-about {
 	width: 70%;
