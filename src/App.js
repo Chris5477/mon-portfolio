@@ -23,7 +23,7 @@ function App() {
 
 	useEffect(() => {
 		setInterval(() => createImg(pathImg), 4000);
-	}, []);
+	});
 
 	const pages = [
 		<Home />,

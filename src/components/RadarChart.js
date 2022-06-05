@@ -1,4 +1,4 @@
-import { Label, Text, PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart } from "recharts";
+import { Text, PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart } from "recharts";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { langages } from "../utils/langages";
