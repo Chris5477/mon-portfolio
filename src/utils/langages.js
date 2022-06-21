@@ -11,7 +11,7 @@ export const langages = [
     },
     {
         subject: "Sass",
-        A: 65,
+        A: 75,
         fullMark: 100,
     },
     {
