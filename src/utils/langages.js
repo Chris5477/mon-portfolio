@@ -39,4 +39,10 @@ export const langages = [
         A: 70,
         fullMark: 100,
     },
+    {
+        subject: "SQL",
+        A: 50,
+        fullMark: 100,
+    },
+    
 ];
