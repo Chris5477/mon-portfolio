@@ -29,12 +29,12 @@ const RadarChartComponent = () => {
 			>
 				Mes compétences
 			</Typography>
-			<RadarChart outerRadius={220} width={600} height={600} data={langages}>
+			<RadarChart outerRadius={200} width={600} height={600} data={langages}>
 				<PolarGrid stroke="#004ba0" />
 				<PolarAngleAxis
 					tick={(props) => renderPolarAngleAxis(props)}
 					stroke="#004ba0"
-					fontSize={25}
+					fontSize={20}
 					fontWeight={800}
 					dataKey="subject"
 				/>

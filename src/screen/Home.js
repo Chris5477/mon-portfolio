@@ -16,7 +16,7 @@ const Home = () => {
 						Christopher <br /> Petitcolas
 					</Typography>
 
-					<Typography mb={1}>Développeur Front-end spécialisé React et Node.js</Typography>
+					<Typography mb={1}>Développeur Front-end spécialisé React</Typography>
 
 					<Typography mb={1}>En recherche d'un CDD/ CDI ou alternance</Typography>
 					<Typography mb={1}>Éligible à la prime de 8000 €</Typography>

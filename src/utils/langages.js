@@ -44,5 +44,15 @@ export const langages = [
         A: 50,
         fullMark: 100,
     },
+    {
+        subject: "Typescript",
+        A: 60,
+        fullMark: 100,
+    },
+    {
+        subject: "Docker",
+        A: 60,
+        fullMark: 100,
+    },
     
 ];
